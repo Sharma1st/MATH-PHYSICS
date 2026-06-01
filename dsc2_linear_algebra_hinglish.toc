@@ -1,0 +1,36 @@
+\contentsline {section}{\numberline {1}UNIT - I: Euclidean Space $\mathbb {R}^n$ and Matrices}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Euclidean Space $\mathbb {R}^n$ \& Vector Operations}{3}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Fundamental Vector Operations}{3}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Linear Combinations of Vectors}{4}{subsubsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.2}Dot Product \& Geometric Inequalities}{4}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Important Properties of Dot Product}{4}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Cauchy-Schwarz \& Triangle Inequalities}{4}{subsubsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.3}Solving Systems of Linear Equations \& Row Reductions}{5}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Gaussian Elimination \& Gauss-Jordan Reduction}{5}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Application: Curve Fitting}{6}{subsubsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.4}Matrix Rank, Row Space \& Eigenvalues}{6}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}Rank and Row Space of a Matrix}{6}{subsubsection.1.4.1}%
+\contentsline {subsubsection}{\numberline {1.4.2}Eigenvalues, Eigenvectors and Diagonalization}{6}{subsubsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.5}Master Solving Guide: Euclidean Space \& Matrices}{7}{subsection.1.5}%
+\contentsline {subsubsection}{\numberline {1.5.1}Algorithm: Row Reduction (REF/RREF) bina kisi calculation mistake ke}{7}{subsubsection.1.5.1}%
+\contentsline {subsubsection}{\numberline {1.5.2}Algorithm: Eigenvalues \& Diagonalization Step-by-Step}{7}{subsubsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.6}High-Yield 5/10 Marks Exam Questions (Unit I)}{7}{subsection.1.6}%
+\contentsline {section}{\numberline {2}UNIT - II: Introduction to Vector Spaces}{14}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Definition, Axioms \& Elementary Properties}{14}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Elementary Properties of Vector Spaces}{14}{subsubsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.2}Subspaces and Span}{15}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Linear Independence and Dependence}{15}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Basis and Dimension}{15}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Master Solving Guide: Introduction to Vector Spaces}{15}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Algorithm: Subspace Test Recipe}{16}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}Algorithm: Basis \& Dimension of Subspace with equations}{16}{subsubsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.6}High-Yield 5/10 Marks Exam Questions (Unit II)}{16}{subsection.2.6}%
+\contentsline {section}{\numberline {3}UNIT - III: Linear Transformations}{22}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Definition and Properties}{22}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Matrix of a Linear Transformation}{22}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Kernel, Range and Rank-Nullity Theorem}{23}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}One-to-One, Onto \& Isomorphisms}{23}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Master Solving Guide: Linear Transformations}{24}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Algorithm: Linearity Verification Test}{24}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Algorithm: Finding Kernel Basis \& Nullity Step-by-Step}{24}{subsubsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.6}High-Yield 5/10 Marks Exam Questions (Unit III)}{24}{subsection.3.6}%

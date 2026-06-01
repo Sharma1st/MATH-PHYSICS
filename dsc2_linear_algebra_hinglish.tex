@@ -1,0 +1,1138 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- Core Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsfonts, amsthm}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{sectsty}
+\usepackage[colorlinks=true, linkcolor=RoyalBlue, citecolor=RoyalBlue, urlcolor=RoyalBlue]{hyperref}
+
+% --- Elegant Styling & Boxes ---
+\usepackage[most]{tcolorbox}
+
+% Define Theme Colors
+\definecolor{RoyalBlue}{rgb}{0.08, 0.35, 0.65}
+\definecolor{DarkSlate}{rgb}{0.15, 0.20, 0.25}
+\definecolor{ForestGreen}{rgb}{0.10, 0.55, 0.20}
+\definecolor{Eggplant}{rgb}{0.38, 0.12, 0.38}
+\definecolor{SoftGray}{rgb}{0.96, 0.97, 0.98}
+\definecolor{Amber}{rgb}{0.85, 0.45, 0.05}
+\definecolor{TealBlue}{rgb}{0.0, 0.5, 0.5}
+
+% Apply Margins
+\geometry{
+    top=1.0in,
+    bottom=1.0in,
+    left=0.85in,
+    right=0.85in,
+    headheight=14pt
+}
+
+% Section styling
+\sectionfont{\color{RoyalBlue}\sectionrule{0pt}{0pt}{-5pt}{1pt}}
+\subsectionfont{\color{Eggplant}}
+\subsubsectionfont{\color{DarkSlate}}
+
+% Headers and Footers
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\color{gray}\itshape DSC-2: Linear Algebra (Hinglish Complete Guide)}
+\fancyhead[R]{\color{gray}\itshape Theory \& Solve Master}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% --- Custom Beautiful TColorBoxes ---
+\newtcolorbox{definitionbox}[1][]{
+    enhanced,
+    colback=Amber!3!white,
+    colframe=Amber,
+    width=\textwidth,
+    arc=2mm,
+    boxrule=1.2pt,
+    title=\textbf{Definition: #1},
+    coltitle=white,
+    colbacktitle=Amber,
+    attach boxed title to top left={yshift=-2mm, xshift=5mm},
+    boxed title style={arc=1mm},
+    fonttitle=\sffamily\bfseries\small,
+    drop shadow={Amber!15!white}
+}
+
+\newtcolorbox{theorembox}[1][]{
+    enhanced,
+    colback=TealBlue!3!white,
+    colframe=TealBlue,
+    width=\textwidth,
+    arc=2mm,
+    boxrule=1.2pt,
+    title=\textbf{Theorem: #1},
+    coltitle=white,
+    colbacktitle=TealBlue,
+    attach boxed title to top left={yshift=-2mm, xshift=5mm},
+    boxed title style={arc=1mm},
+    fonttitle=\sffamily\bfseries\small,
+    drop shadow={TealBlue!15!white}
+}
+
+\newtcolorbox{questionbox}[1][]{
+    enhanced,
+    colback=white,
+    colframe=RoyalBlue,
+    width=\textwidth,
+    arc=2mm,
+    boxrule=1.2pt,
+    title=\textbf{Practice Question: #1},
+    coltitle=white,
+    colbacktitle=RoyalBlue,
+    attach boxed title to top left={yshift=-2mm, xshift=5mm},
+    boxed title style={arc=1mm},
+    fonttitle=\sffamily\bfseries\small,
+    drop shadow={RoyalBlue!15!white}
+}
+
+\newtcolorbox{solutionbox}[1][]{
+    enhanced,
+    colback=ForestGreen!3!white,
+    colframe=ForestGreen,
+    width=\textwidth,
+    arc=2mm,
+    boxrule=1.2pt,
+    title=\textbf{Step-by-Step Solution (Hinglish)},
+    coltitle=white,
+    colbacktitle=ForestGreen,
+    attach boxed title to top left={yshift=-2mm, xshift=5mm},
+    boxed title style={arc=1mm},
+    fonttitle=\sffamily\bfseries\small,
+    drop shadow={ForestGreen!10!white}
+}
+
+\newtcolorbox{hinglishbox}[1][]{
+    enhanced,
+    colback=Eggplant!3!white,
+    colframe=Eggplant,
+    width=\textwidth,
+    arc=2mm,
+    boxrule=1.0pt,
+    title=\textbf{Samjho Shuru Se (Hinglish Explanation)},
+    coltitle=white,
+    colbacktitle=Eggplant,
+    attach boxed title to top left={yshift=-2mm, xshift=5mm},
+    boxed title style={arc=1mm},
+    fonttitle=\sffamily\bfseries\small
+}
+
+\begin{document}
+
+% --- Cover Page ---
+\begin{center}
+    \vspace*{1.5cm}
+    {\Huge\bfseries\color{RoyalBlue} DSC-2: Linear Algebra}\\[0.4cm]
+    {\Large\bfseries\color{Eggplant} Complete Hinglish Study Companion \& Workbook}\\[0.6cm]
+    \rule{\linewidth}{1.5pt}\\[1.0cm]
+    
+    {\large Designed especially for college students looking for crystal-clear concepts, \\
+    intuitive Hindi-English explanations, and hand-solved practice problems.}\\[1.5cm]
+    
+    \textbf{Covers the entire syllabus:}\\
+    \textbf{Unit I:} Euclidean Space $\mathbb{R}^n$ and Matrices\\
+    \textbf{Unit II:} Introduction to Vector Spaces\\
+    \textbf{Unit III:} Linear Transformations\\[1.5cm]
+    
+    \begin{tcolorbox}[colback=RoyalBlue!5!white, colframe=RoyalBlue, width=0.85\textwidth, arc=2mm, title=\textbf{NEW FEATURE: Master Solving Guides \& 15 Exam PYQs}, coltitle=white, fonttitle=\sffamily\bfseries\small, center]
+        Every unit now includes step-by-step algorithmic master steps to solve exam problems and 5 high-yield solved university questions (valued at 5 \& 10 marks) with full explanations.
+    \end{tcolorbox}
+    
+    \vfill
+    {\large\bfseries\color{DarkSlate} Antigravity Academic Series}
+\end{center}
+\newpage
+
+\tableofcontents
+\newpage
+
+% =========================================================================
+% UNIT I
+% =========================================================================
+\section{UNIT - I: Euclidean Space $\mathbb{R}^n$ and Matrices}
+
+Hello students! Aaj hum Linear Algebra ka sabse fundamental aur exciting part shuru karne ja rahe hain: \textbf{Euclidean Space $\mathbb{R}^n$ aur Matrices}. Yeh unit aapke linear algebra journey ka base banayega. Chaliye ek-ek karke saare concepts ko easy language (Hinglish) me samajhte hain!
+
+\subsection{Euclidean Space $\mathbb{R}^n$ \& Vector Operations}
+
+\begin{definitionbox}[Euclidean Space $\mathbb{R}^n$]
+The set of all ordered $n$-tuples of real numbers is called the $n$-dimensional Euclidean Space, denoted by $\mathbb{R}^n$.
+\[ \mathbb{R}^n = \{ (x_1, x_2, \dots, x_n) \mid x_i \in \mathbb{R} \text{ for all } i = 1, 2, \dots, n \} \]
+An element $x \in \mathbb{R}^n$ is called a \textbf{vector}, represented as:
+\[ x = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix} \quad \text{or} \quad x = (x_1, x_2, \dots, x_n)^T \]
+\end{definitionbox}
+
+\begin{hinglishbox}
+$\mathbb{R}^n$ ka seedha matlab hai ek aisi duniya jisme har vector ke paas $n$ coordinates (ya values) hoti hain.
+\begin{itemize}
+    \item Agar $n=1$, toh yeh ek normal number line hai ($\mathbb{R}^1$).
+    \item Agar $n=2$, toh yeh humara 2D plane hai ($\mathbb{R}^2$), jahan vectors $(x, y)$ ki form me hote hain.
+    \item Agar $n=3$, toh yeh humara 3D space hai ($\mathbb{R}^3$), jahan vectors $(x, y, z)$ hote hain.
+    \item Agar $n > 3$ ho jaye, toh hum use visually dekh toh nahi sakte, par mathematically use $\mathbb{R}^n$ bolte hain.
+\end{itemize}
+\end{hinglishbox}
+
+\subsubsection{Fundamental Vector Operations}
+$\mathbb{R}^n$ me hum do main operations karte hain:
+\begin{enumerate}
+    \item \textbf{Vector Addition:} Agar $u = (u_1, u_2, \dots, u_n)^T$ aur $v = (v_1, v_2, \dots, v_n)^T$ do vectors hain, toh unka sum $u + v$ component-wise add hota hai:
+    \[ u + v = (u_1 + v_1, u_2 + v_2, \dots, u_n + v_n)^T \]
+    \item \textbf{Scalar Multiplication:} Agar $c$ ek real number (scalar) hai, toh vector $u$ ko $c$ se multiply karne par har component $c$ se multiply ho jata hai:
+    \[ c u = (c u_1, c u_2, \dots, c u_n)^T \]
+\end{enumerate}
+
+\subsubsection{Linear Combinations of Vectors}
+\begin{definitionbox}[Linear Combination]
+Given vectors $v_1, v_2, \dots, v_k \in \mathbb{R}^n$ and scalars $c_1, c_2, \dots, c_k \in \mathbb{R}$, the vector:
+\[ w = c_1 v_1 + c_2 v_2 + \dots + c_k v_k \]
+is called a \textbf{linear combination} of the vectors $v_1, v_2, \dots, v_k$.
+\end{definitionbox}
+
+\begin{hinglishbox}
+Linear Combination ka matlab hai: "kuch vectors lo, unhe alag-alag scalars se multiply karo, aur fir unhe aapas me add kar do".
+Jaise agar aapke paas do vectors hain $v_1 = [1, 2]^T$ aur $v_2 = [0, 1]^T$, aur scalars hain $c_1 = 2, c_2 = -3$. 
+Toh unka linear combination hoga:
+\[ w = 2v_1 - 3v_2 = 2\begin{bmatrix}1\\2\end{bmatrix} - 3\begin{bmatrix}0\\1\end{bmatrix} = \begin{bmatrix}2\\4\end{bmatrix} - \begin{bmatrix}0\\3\end{bmatrix} = \begin{bmatrix}2\\1\end{bmatrix} \]
+\end{hinglishbox}
+
+\subsection{Dot Product \& Geometric Inequalities}
+
+\begin{definitionbox}[Dot Product / Inner Product]
+For vectors $u, v \in \mathbb{R}^n$, the dot product $u \cdot v$ is defined as:
+\[ u \cdot v = u_1 v_1 + u_2 v_2 + \dots + u_n v_n = u^T v \]
+The \textbf{Norm} (or length) of a vector $u$ is denoted by $\|u\|$ and is defined as:
+\[ \|u\| = \sqrt{u \cdot u} = \sqrt{u_1^2 + u_2^2 + \dots + u_n^2} \]
+\end{definitionbox}
+
+\subsubsection{Important Properties of Dot Product}
+For any vectors $u, v, w \in \mathbb{R}^n$ and scalar $c$:
+\begin{itemize}
+    \item $u \cdot v = v \cdot u$ (Symmetric)
+    \item $(u + v) \cdot w = u \cdot w + v \cdot w$ (Distributive)
+    \item $(c u) \cdot v = c (u \cdot v) = u \cdot (c v)$
+    \item $u \cdot u \ge 0$, and $u \cdot u = 0 \iff u = 0$ (Positive Definite)
+\end{itemize}
+
+\subsubsection{Cauchy-Schwarz \& Triangle Inequalities}
+Yeh dono inequalities linear algebra ke sabse important results me se hain. Har exam me inka proof ya application aata hi aata hai!
+
+\begin{theorembox}[Cauchy-Schwarz Inequality]
+For any vectors $u, v \in \mathbb{R}^n$:
+\[ |u \cdot v| \le \|u\| \|v\| \]
+Equality holds if and only if $u$ and $v$ are linearly dependent.
+\end{theorembox}
+
+\begin{hinglishbox}
+\textbf{Cauchy-Schwarz ko samjho:}
+$\mathbb{R}^2$ aur $\mathbb{R}^3$ me hum jante hain ki $u \cdot v = \|u\| \|v\| \cos\theta$.
+Kyuki $\cos\theta$ ki value humesha $-1$ aur $1$ ke beech me hoti hai (yani $|\cos\theta| \le 1$), isliye:
+\[ |u \cdot v| = | \|u\| \|v\| \cos\theta | = \|u\| \|v\| |\cos\theta| \le \|u\| \|v\| \]
+Yeh inequality $\mathbb{R}^n$ ke kisi bhi dimension me sach hoti hai!
+\end{hinglishbox}
+
+\begin{theorembox}[Triangle Inequality]
+For any vectors $u, v \in \mathbb{R}^n$:
+\[ \|u + v\| \le \|u\| + \|v\| \]
+\end{theorembox}
+
+\begin{proof}[Proof of Triangle Inequality]
+Let's calculate the square of the norm $\|u+v\|^2$:
+\begin{align*}
+\|u + v\|^2 &= (u + v) \cdot (u + v) \\
+&= u \cdot u + u \cdot v + v \cdot u + v \cdot v \\
+&= \|u\|^2 + 2(u \cdot v) + \|v\|^2
+\end{align*}
+Since $u \cdot v \le |u \cdot v|$, by Cauchy-Schwarz inequality, we have $u \cdot v \le \|u\| \|v\|$:
+\begin{align*}
+\|u + v\|^2 &\le \|u\|^2 + 2\|u\| \|v\| + \|v\|^2 \\
+&= (\|u\| + \|v\|)^2
+\end{align*}
+Taking square root on both sides:
+\[ \|u + v\| \le \|u\| + \|v\| \]
+Hence proved!
+\end{proof}
+
+\subsection{Solving Systems of Linear Equations \& Row Reductions}
+
+Linear equations ko solve karna matrix algebra ka core application hai. Isme hum do standard techniques padhte hain: **Gaussian Elimination** aur **Gauss-Jordan Elimination**.
+
+\subsubsection{Gaussian Elimination \& Gauss-Jordan Reduction}
+\begin{itemize}
+    \item \textbf{Row Echelon Form (REF):} Ek matrix Row Echelon Form me tab hoti hai jab:
+        1. Saari non-zero rows, zero rows ke upar hon.
+        2. Kisi bhi row ka leading entry (pehla non-zero element) uski upar wali row ke leading entry ke right me ho.
+        3. Leading entry ke niche ke saare elements 0 hon.
+    \item \textbf{Reduced Row Echelon Form (RREF):} Agar REF matrix me:
+        1. Har leading entry $1$ ho (ise 'leading 1' bolte hain).
+        2. Har leading 1 ke column ke baaki saare elements 0 hon.
+        Toh use Reduced Row Echelon Form (RREF) kehte hain.
+\end{itemize}
+
+\begin{hinglishbox}
+\textbf{Gaussian Elimination vs Gauss-Jordan:}
+\begin{itemize}
+    \item \textbf{Gaussian Elimination:} Matrix ko Row Echelon Form (REF) me laata hai aur fir hum \textbf{Back Substitution} se variables ki values nikalte hain.
+    \item \textbf{Gauss-Jordan Elimination:} Matrix ko poore Reduced Row Echelon Form (RREF) me convert karta hai. RREF se direct answers bina back substitution ke mil jaate hain.
+\end{itemize}
+\end{hinglishbox}
+
+\subsubsection{Application: Curve Fitting}
+Gaussian elimination ka ek bada practical use hai \textbf{Curve Fitting}. Agar humein kuch points $(x_i, y_i)$ diye hon aur humein unse pass hone wala polynomial find karna ho (jaise $y = ax^2 + bx + c$), toh hum points ko equation me substitute karke linear equations ka system banate hain aur fir use solve karte hain!
+
+\subsection{Matrix Rank, Row Space \& Eigenvalues}
+
+\subsubsection{Rank and Row Space of a Matrix}
+\begin{definitionbox}[Row Space and Rank]
+\begin{itemize}
+    \item \textbf{Row Space:} The row space of an $m \times n$ matrix $A$ is the subspace of $\mathbb{R}^n$ spanned by the row vectors of $A$.
+    \item \textbf{Rank:} The rank of a matrix $A$ (denoted by $\text{rank}(A)$) is the dimension of its row space (which is equal to the number of non-zero rows in its Row Echelon Form).
+\end{itemize}
+\end{definitionbox}
+
+\subsubsection{Eigenvalues, Eigenvectors and Diagonalization}
+\begin{definitionbox}[Eigenvalues and Eigenvectors]
+Let $A$ be an $n \times n$ matrix. A scalar $\lambda$ is called an \textbf{eigenvalue} of $A$ if there exists a non-zero vector $x \in \mathbb{R}^n$ such that:
+\[ A x = \lambda x \]
+The vector $x$ is called an \textbf{eigenvector} corresponding to the eigenvalue $\lambda$.
+\end{definitionbox}
+
+\begin{hinglishbox}
+\textbf{Eigenvalues ka simple matlab:}
+Normal case me jab hum kisi vector $x$ ko matrix $A$ se multiply karte hain ($Ax$), toh vector ki direction aur length dono badal jaati hain.
+Lekin agar $x$ ek \textbf{eigenvector} hai, toh use $A$ se multiply karne par uski direction change nahi hoti, bas uski length change hoti hai scalar factor $\lambda$ (eigenvalue) ke multiplier se! Yaani $Ax$ aur $x$ parallel vectors hote hain.
+\end{hinglishbox}
+
+\begin{theorembox}[Characteristic Equation]
+To find eigenvalues, we solve the characteristic equation:
+\[ \det(A - \lambda I) = 0 \]
+Where $I$ is the identity matrix. The polynomial $p(\lambda) = \det(A - \lambda I)$ is called the \textbf{Characteristic Polynomial} of $A$.
+\end{theorembox}
+
+\begin{definitionbox}[Diagonalization]
+An $n \times n$ matrix $A$ is \textbf{diagonalizable} if there exists an invertible matrix $P$ and a diagonal matrix $D$ such that:
+\[ P^{-1} A P = D \]
+This is possible if and only if $A$ has $n$ linearly independent eigenvectors. The columns of $P$ are the eigenvectors of $A$, and the diagonal elements of $D$ are the corresponding eigenvalues.
+\end{definitionbox}
+
+% --- NEW ADDITIONS FOR UNIT I ---
+\subsection{Master Solving Guide: Euclidean Space \& Matrices}
+
+Agar aapko Unit I ke numericals me full marks laane hain, toh in steps ko dil me bitha lijiye:
+
+\subsubsection{Algorithm: Row Reduction (REF/RREF) bina kisi calculation mistake ke}
+\begin{enumerate}
+    \item \textbf{Pivot Select Karein:} Row 1 ke pehle element ko $1$ banane ki koshish karein. Agar wahan koi doosra number hai, toh columns swap na karein balki rows ko aapas me swap karein ($R_1 \leftrightarrow R_2$) ya poor row ko divide karein.
+    \item \textbf{Pivot ke neeche Zero banayein:} Agar pivot element $1$ hai Row 1 me, toh Row 2 aur Row 3 ke elements ko zero karne ke liye standard operation use karein: $R_2 \to R_2 - a R_1$ aur $R_3 \to R_3 - b R_1$.
+    \item \textbf{Fractions se Bachein:} Row operations karte waqt agar fractions ban rahe hain, toh calculation aasan karne ke liye poori row ko scaling factor se multiply kar lein pehle, taaki denominator cancel ho jaye!
+\end{enumerate}
+
+\subsubsection{Algorithm: Eigenvalues \& Diagonalization Step-by-Step}
+\begin{enumerate}
+    \item \textbf{Step 1 (Characteristic Polynomial):} $A - \lambda I$ matrix likhiye. Uska determinant $\det(A - \lambda I) = 0$ solve karke $\lambda$ ki values nikalye.
+    \item \textbf{Step 2 (Eigenvectors):} Har $\lambda$ ke liye $(A - \lambda I)x = 0$ solve kijiye. Matrix ko REF me convert karke free variables ki help se basic independent vectors likhiye.
+    \item \textbf{Step 3 (Diagonalization Test):} Agar $A$ ek $n \times n$ matrix hai aur aapko $n$ independent eigenvectors mil gaye hain, toh matrix diagonalizable hai. Matrix $P$ banaiye jisme columns eigenvectors hain, aur $D$ banaiye jisme diagonal entries eigenvalues hain!
+\end{enumerate}
+
+\subsection{High-Yield 5/10 Marks Exam Questions (Unit I)}
+
+\begin{questionbox}[Question 1 (10 Marks): Cauchy-Schwarz Inequality Proof \& Equality]
+State and prove the Cauchy-Schwarz inequality for vectors in $\mathbb{R}^n$. Explain the exact conditions under which the equality holds. Verify it for vectors $u = (2, -1, 3)^T$ and $v = (1, 4, 2)^T$.
+\end{questionbox}
+
+\begin{solutionbox}
+\textbf{Part A: Statement \& Theoretical Proof}
+\\
+\textbf{Statement:} For any $u, v \in \mathbb{R}^n$, $|u \cdot v| \le \|u\| \|v\|$.
+\\
+\textbf{Proof:} 
+If either $u = \mathbf{0}$ or $v = \mathbf{0}$, then $|u \cdot v| = 0$ and $\|u\| \|v\| = 0$. Hence, the inequality holds as $0 = 0$.
+
+Now, assume $u \neq \mathbf{0}$ and $v \neq \mathbf{0}$. For any real scalar $t \in \mathbb{R}$, consider the norm of the vector $t u - v$:
+\[ \|t u - v\|^2 \ge 0 \quad (\text{Since norm squared is always non-negative}) \]
+Using dot product properties:
+\[ (t u - v) \cdot (t u - v) \ge 0 \]
+\[ t^2 (u \cdot u) - 2t (u \cdot v) + (v \cdot v) \ge 0 \]
+\[ t^2 \|u\|^2 - 2t (u \cdot v) + \|v\|^2 \ge 0 \]
+This is a quadratic equation in $t$ of the form $A t^2 + B t + C \ge 0$, where:
+\[ A = \|u\|^2 > 0, \quad B = -2(u \cdot v), \quad C = \|v\|^2 \]
+For a quadratic equation to be always $\ge 0$ for all real $t$, its discriminant $D = B^2 - 4AC$ must be less than or equal to $0$ ($D \le 0$):
+\[ (-2(u \cdot v))^2 - 4 (\|u\|^2) (\|v\|^2) \le 0 \]
+\[ 4 (u \cdot v)^2 - 4 \|u\|^2 \|v\|^2 \le 0 \]
+\[ (u \cdot v)^2 \le \|u\|^2 \|v\|^2 \]
+Taking the square root on both sides:
+\[ |u \cdot v| \le \|u\| \|v\| \]
+Hence proved!
+
+\textbf{Condition for Equality:} 
+Equality holds ($|u \cdot v| = \|u\| \|v\|$) if and only if the discriminant is zero ($D = 0$). This happens if and only if there exists a real $t$ such that $\|t u - v\|^2 = 0 \implies t u - v = \mathbf{0} \implies v = t u$.
+This means $u$ and $v$ must be **linearly dependent** (parallel vectors).
+
+\textbf{Part B: Numerical Verification}
+Given $u = (2, -1, 3)^T$ and $v = (1, 4, 2)^T$:
+1. **Dot Product:** $u \cdot v = 2(1) + (-1)(4) + 3(2) = 2 - 4 + 6 = 4$.
+2. **Norm of $u$:** $\|u\| = \sqrt{2^2 + (-1)^2 + 3^2} = \sqrt{4 + 1 + 9} = \sqrt{14} \approx 3.74$.
+3. **Norm of $v$:** $\|v\| = \sqrt{1^2 + 4^2 + 2^2} = \sqrt{1 + 16 + 4} = \sqrt{21} \approx 4.58$.
+4. **Evaluate LHS vs RHS:**
+   * LHS = $|u \cdot v| = |4| = 4$.
+   * RHS = $\|u\| \|v\| = \sqrt{14} \times \sqrt{21} = \sqrt{294} \approx 17.15$.
+   Since $4 \le 17.15$, the Cauchy-Schwarz inequality is verified perfectly!
+\end{solutionbox}
+
+\vspace{0.8cm}
+
+\begin{questionbox}[Question 2 (10 Marks): System with Parameter $k$]
+Determine for which values of parameter $k$ the following system of linear equations has: (i) No solution, (ii) A unique solution, and (iii) Infinitely many solutions:
+\begin{align*}
+x + y + z &= 2 \\
+x + 2y + 3z &= 5 \\
+x + 3y + kz &= 8
+\end{align*}
+\end{questionbox}
+
+\begin{solutionbox}
+\textbf{Step 1: Write Augmented Matrix $[A \mid B]$:}
+\[ [A \mid B] = \begin{bmatrix} 1 & 1 & 1 & \bigm| & 2 \\ 1 & 2 & 3 & \bigm| & 5 \\ 1 & 3 & k & \bigm| & 8 \end{bmatrix} \]
+
+\textbf{Step 2: Convert to Row Echelon Form (REF):}
+Apply row operations: $R_2 \to R_2 - R_1$ and $R_3 \to R_3 - R_1$.
+\[ \begin{bmatrix} 1 & 1 & 1 & \bigm| & 2 \\ 0 & 1 & 2 & \bigm| & 3 \\ 0 & 2 & k-1 & \bigm| & 6 \end{bmatrix} \]
+Apply row operation: $R_3 \to R_3 - 2R_2$.
+\[ R_3 \to \begin{bmatrix} 0 & 2-2(1) & (k-1)-2(2) & \bigm| & 6-2(3) \end{bmatrix} = \begin{bmatrix} 0 & 0 & k-5 & \bigm| & 0 \end{bmatrix} \]
+So, the final row reduced augmented matrix is:
+\[ \begin{bmatrix} 1 & 1 & 1 & \bigm| & 2 \\ 0 & 1 & 2 & \bigm| & 3 \\ 0 & 0 & k-5 & \bigm| & 0 \end{bmatrix} \]
+
+\textbf{Step 3: Analyze based on parameter $k$:}
+\begin{enumerate}
+    \item \textbf{Case I: Unique Solution}
+          A unique solution occurs when there is a pivot in every column of the coefficient matrix $A$. This requires the bottom-right element to be non-zero:
+          \[ k - 5 \neq 0 \implies k \neq 5 \]
+          Under this condition, the system has a unique solution. (Specifically, $(k-5)z = 0 \implies z = 0$, which gives $y = 3$ and $x = -1$).
+    \item \textbf{Case II: Infinitely Many Solutions}
+          This occurs when the rank of $A$ equals the rank of $[A \mid B]$, but is less than the number of variables (3). 
+          This requires a row of all zeros in the augmented matrix:
+          \[ k - 5 = 0 \implies k = 5 \]
+          If $k = 5$, the third row becomes $[0, 0, 0 \mid 0]$. Rank of $A$ = Rank of $[A|B]$ = 2 < 3. 
+          So the system has infinitely many solutions (with $z = t$ as a free parameter).
+    \item \textbf{Case III: No Solution}
+          For no solution, we need a row of the form $[0, 0, 0 \mid c]$ where $c \neq 0$.
+          Looking at the third row $[0, 0, k-5 \mid 0]$, the right-hand side is **always 0**.
+          Therefore, there is **no value of $k$** for which the system has no solution. The system is always consistent!
+\end{enumerate}
+\end{solutionbox}
+
+\vspace{0.8cm}
+
+\begin{questionbox}[Question 3 (10 Marks): Curve Fitting Parabola]
+Find the quadratic equation $y = ax^2 + bx + c$ that passes through the three data points $(-1, 2)$, $(1, 6)$, and $(2, 11)$ using linear systems and row reductions.
+\end{questionbox}
+
+\begin{solutionbox}
+\textbf{Step 1: Set up the linear equations:}
+Substitute $(x, y)$ coordinates into the polynomial equation $y = ax^2 + bx + c$:
+\begin{align*}
+\text{For } (-1, 2): \quad a(-1)^2 + b(-1) + c = 2 &\implies a - b + c = 2 \\
+\text{For } (1, 6): \quad a(1)^2 + b(1) + c = 6 &\implies a + b + c = 6 \\
+\text{For } (2, 11): \quad a(2)^2 + b(2) + c = 11 &\implies 4a + 2b + c = 11
+\end{align*}
+
+\textbf{Step 2: Write the Augmented Matrix $[A \mid B]$:}
+\[ [A \mid B] = \begin{bmatrix} 1 & -1 & 1 & \bigm| & 2 \\ 1 & 1 & 1 & \bigm| & 6 \\ 4 & 2 & 1 & \bigm| & 11 \end{bmatrix} \]
+
+\textbf{Step 3: Convert to Row Echelon Form (REF):}
+Apply $R_2 \to R_2 - R_1$ and $R_3 \to R_3 - 4R_1$:
+\[ \begin{bmatrix} 1 & -1 & 1 & \bigm| & 2 \\ 0 & 2 & 0 & \bigm| & 4 \\ 0 & 6 & -3 & \bigm| & 3 \end{bmatrix} \]
+Normalize Row 2: $R_2 \to \frac{1}{2} R_2$:
+\[ \begin{bmatrix} 1 & -1 & 1 & \bigm| & 2 \\ 0 & 1 & 0 & \bigm| & 2 \\ 0 & 6 & -3 & \bigm| & 3 \end{bmatrix} \]
+Apply $R_3 \to R_3 - 6R_2$:
+\[ \begin{bmatrix} 1 & -1 & 1 & \bigm| & 2 \\ 0 & 1 & 0 & \bigm| & 2 \\ 0 & 0 & -3 & \bigm| & -9 \end{bmatrix} \]
+Normalize Row 3: $R_3 \to -\frac{1}{3} R_3$:
+\[ \begin{bmatrix} 1 & -1 & 1 & \bigm| & 2 \\ 0 & 1 & 0 & \bigm| & 2 \\ 0 & 0 & 1 & \bigm| & 3 \end{bmatrix} \]
+
+\textbf{Step 4: Back Substitution:}
+1. From Row 3: $c = 3$.
+2. From Row 2: $b = 2$.
+3. From Row 1: $a - b + c = 2 \implies a - 2 + 3 = 2 \implies a + 1 = 2 \implies a = 1$.
+
+\textbf{Answer:} The quadratic polynomial is:
+\[ y = x^2 + 2x + 3 \]
+*(Let's verify: for $x=-1$, $y = 1-2+3=2$. For $x=1$, $y=1+2+3=6$. For $x=2$, $y=4+4+3=11$. Absolutely correct!)*
+\end{solutionbox}
+
+\vspace{0.8cm}
+
+\begin{questionbox}[Question 4 (10 Marks): Diagonalization of $3 \times 3$ Symmetric Matrix]
+Find all eigenvalues, corresponding eigenvectors, and diagonalize the following matrix:
+\[ A = \begin{bmatrix} 2 & 0 & 0 \\ 0 & 3 & 4 \\ 0 & 4 & -3 \end{bmatrix} \]
+\end{questionbox}
+
+\begin{solutionbox}
+\textbf{Step 1: Formulate and solve the Characteristic Equation:}
+\[ \det(A - \lambda I) = 0 \implies \det\begin{bmatrix} 2-\lambda & 0 & 0 \\ 0 & 3-\lambda & 4 \\ 0 & 4 & -3-\lambda \end{bmatrix} = 0 \]
+Expand along the first row:
+\[ (2 - \lambda) \left[ (3 - \lambda)(-3 - \lambda) - 16 \right] = 0 \]
+\[ (2 - \lambda) \left[ (\lambda^2 - 9) - 16 \right] = 0 \implies (2 - \lambda)(\lambda^2 - 25) = 0 \]
+\[ (2 - \lambda)(\lambda - 5)(\lambda + 5) = 0 \]
+So, the eigenvalues are:
+\[ \lambda_1 = 2, \quad \lambda_2 = 5, \quad \lambda_3 = -5 \]
+
+\textbf{Step 2: Find eigenvectors for each eigenvalue:}
+\begin{itemize}
+    \item \textbf{For $\lambda_1 = 2$:} Solve $(A - 2I)x = 0$.
+          \[ \begin{bmatrix} 0 & 0 & 0 \\ 0 & 1 & 4 \\ 0 & 4 & -5 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} \]
+          From row 2 and 3 operations, we get $x_2 = 0$ and $x_3 = 0$. $x_1$ is a free variable.
+          Let $x_1 = 1$. The eigenvector is:
+          \[ p_1 = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix} \]
+    \item \textbf{For $\lambda_2 = 5$:} Solve $(A - 5I)x = 0$.
+          \[ \begin{bmatrix} -3 & 0 & 0 \\ 0 & -2 & 4 \\ 0 & 4 & -8 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} \]
+          From Row 1: $-3x_1 = 0 \implies x_1 = 0$.
+          From Row 2: $-2x_2 + 4x_3 = 0 \implies x_2 = 2x_3$. Let $x_3 = 1 \implies x_2 = 2$.
+          The eigenvector is:
+          \[ p_2 = \begin{bmatrix} 0 \\ 2 \\ 1 \end{bmatrix} \]
+    \item \textbf{For $\lambda_3 = -5$:} Solve $(A + 5I)x = 0$.
+          \[ \begin{bmatrix} 7 & 0 & 0 \\ 0 & 8 & 4 \\ 0 & 4 & 2 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} \]
+          From Row 1: $7x_1 = 0 \implies x_1 = 0$.
+          From Row 3: $4x_2 + 2x_3 = 0 \implies x_3 = -2x_2$. Let $x_2 = 1 \implies x_3 = -2$.
+          The eigenvector is:
+          \[ p_3 = \begin{bmatrix} 0 \\ 1 \\ -2 \end{bmatrix} \]
+\end{itemize}
+
+\textbf{Step 3: Construct diagonalizing matrices $P$ and $D$:}
+Using eigenvectors as columns for $P$:
+\[ P = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 2 & 1 \\ 0 & 1 & -2 \end{bmatrix}, \quad D = \begin{bmatrix} 2 & 0 & 0 \\ 0 & 5 & 0 \\ 0 & 0 & -5 \end{bmatrix} \]
+Since all three eigenvalues are distinct, the three eigenvectors are linearly independent. Thus, $P$ is invertible and $P^{-1}AP = D$. $A$ is successfully diagonalized!
+\end{solutionbox}
+
+\vspace{0.8cm}
+
+\begin{questionbox}[Question 5 (5 Marks): Rank and Row Space]
+Find the rank and a basis for the row space of the following matrix:
+\[ A = \begin{bmatrix} 1 & -2 & 0 & 3 \\ 2 & -3 & -1 & 5 \\ 3 & -5 & -1 & 8 \end{bmatrix} \]
+\end{questionbox}
+
+\begin{solutionbox}
+\textbf{Step 1: Perform row operations to reduce to Row Echelon Form (REF):}
+Apply $R_2 \to R_2 - 2R_1$ and $R_3 \to R_3 - 3R_1$:
+\[ \begin{bmatrix} 1 & -2 & 0 & 3 \\ 0 & 1 & -1 & -1 \\ 0 & 1 & -1 & -1 \end{bmatrix} \]
+Apply $R_3 \to R_3 - R_2$:
+\[ \begin{bmatrix} 1 & -2 & 0 & 3 \\ 0 & 1 & -1 & -1 \\ 0 & 0 & 0 & 0 \end{bmatrix} \]
+
+\textbf{Step 2: Determine Rank and Basis:}
+1. **Rank:** The number of non-zero rows in the Echelon form is $2$. Thus, $\text{rank}(A) = 2$.
+2. **Basis for Row Space:** The non-zero rows in the Row Echelon Form form a basis for the row space of $A$:
+   \[ \text{Basis} = \left\{ \begin{bmatrix} 1 \\ -2 \\ 0 \\ 3 \end{bmatrix}^T, \begin{bmatrix} 0 \\ 1 \\ -1 \\ -1 \end{bmatrix}^T \right\} \]
+\end{solutionbox}
+
+\newpage
+
+% =========================================================================
+% UNIT II
+% =========================================================================
+\section{UNIT - II: Introduction to Vector Spaces}
+
+Ab hum Linear Algebra ke sabse abstract aur beautiful concept par aate hain: \textbf{Vector Spaces}. Yeh unit aapko normal vectors se aage badhkar, functions, matrices, aur polynomials ko bhi vectors ki tarah treat karna sikhayega!
+
+\subsection{Definition, Axioms \& Elementary Properties}
+
+\begin{definitionbox}[Vector Space]
+A \textbf{Vector Space} $V$ over a field of real numbers $\mathbb{R}$ is a set of elements (called vectors) together with two operations, Vector Addition ($+$) and Scalar Multiplication ($\cdot$), satisfying the following 8 axioms for all $u, v, w \in V$ and scalars $c, d \in \mathbb{R}$:
+\begin{enumerate}
+    \item \textbf{Additive Commutativity:} $u + v = v + u$
+    \item \textbf{Additive Associativity:} $(u + v) + w = u + (v + w)$
+    \item \textbf{Additive Identity:} There exists a zero vector $0 \in V$ such that $u + 0 = u$ for all $u \in V$.
+    \item \textbf{Additive Inverse:} For each $u \in V$, there exists an element $-u \in V$ such that $u + (-u) = 0$.
+    \item \textbf{Scalar Distributivity I:} $c(u + v) = cu + cv$
+    \item \textbf{Scalar Distributivity II:} $(c + d)u = cu + du$
+    \item \textbf{Scalar Associativity:} $c(du) = (cd)u$
+    \item \textbf{Identity scalar:} $1u = u$ for all $u \in V$.
+\end{enumerate}
+\end{definitionbox}
+
+\begin{hinglishbox}
+\textbf{Aasan bhasha me samjhein:}
+Vector space ka matlab koi 'space' nahi balki **ek set (rules ka group)** hai. Agar kisi set ke elements ko aapas me add karne par aur numbers se multiply karne par wo upar diye gaye 8 simple rules ko follow karein, toh us set ko hum **Vector Space** bol dete hain.
+\begin{itemize}
+    \item $\mathbb{R}^n$ ek standard vector space hai.
+    \item $\mathbb{P}_n$ (sare polynomials of degree $\le n$) bhi ek vector space hai, kyuki do polynomials ko add karne par polynomial hi banta hai!
+    \item $M_{m \times n}$ (saare matrices of size $m \times n$) bhi ek vector space hai!
+\end{itemize}
+\end{hinglishbox}
+
+\subsubsection{Elementary Properties of Vector Spaces}
+For any vector space $V$:
+\begin{itemize}
+    \item $0 \cdot v = 0$
+    \item $c \cdot 0 = 0$
+    \item $(-1)v = -v$
+\end{itemize}
+
+\subsection{Subspaces and Span}
+
+\begin{definitionbox}[Subspace]
+A subset $W$ of a vector space $V$ is called a \textbf{subspace} of $V$ if $W$ is itself a vector space under the same operations of addition and scalar multiplication.
+\end{definitionbox}
+
+\begin{theorembox}[Subspace Test]
+A non-empty subset $W \subseteq V$ is a subspace of $V$ if and only if it satisfies the following three conditions:
+\begin{enumerate}
+    \item The zero vector $0$ of $V$ is in $W$.
+    \item \textbf{Closure under Addition:} If $u, v \in W$, then $u + v \in W$.
+    \item \textbf{Closure under Scalar Multiplication:} If $u \in W$ and $c \in \mathbb{R}$, then $cu \in W$.
+\end{enumerate}
+\end{theorembox}
+
+\subsection{Linear Independence and Dependence}
+
+\begin{definitionbox}[Linear Independence]
+A set of vectors $\{v_1, v_2, \dots, v_r\}$ in a vector space $V$ is \textbf{linearly independent} if the vector equation:
+\[ c_1 v_1 + c_2 v_2 + \dots + c_r v_r = 0 \]
+has \textbf{only the trivial solution}: $c_1 = c_2 = \dots = c_r = 0$.
+If there exists a non-trivial solution (where at least one scalar $c_i \neq 0$), then the set of vectors is \textbf{linearly dependent}.
+\end{definitionbox}
+
+\begin{hinglishbox}
+\textbf{Bina confusion ke samjhein:}
+\begin{itemize}
+    \item \textbf{Linearly Dependent (LD):} Matlab ek vector aisa hai jo baaki vectors ko add-multiply karke banaya ja sakta hai (yaani humare set me kuch 'extra redundant' elements hain).
+    \item \textbf{Linearly Independent (LI):} Matlab koi bhi vector baaki vectors ka combination nahi hai. Saare vectors unique aur unique directions me hain.
+\end{itemize}
+\end{hinglishbox}
+
+\subsection{Basis and Dimension}
+
+\begin{definitionbox}[Basis and Dimension]
+Let $V$ be a vector space. A set of vectors $B = \{v_1, v_2, \dots, v_n\}$ in $V$ is called a \textbf{basis} for $V$ if:
+\begin{enumerate}
+    \item $B$ is linearly independent.
+    \item $B$ spans $V$ (i.e., $\text{span}(B) = V$).
+\end{enumerate}
+The number of vectors in a basis of $V$ is called the \textbf{dimension} of $V$, denoted by $\dim(V)$.
+\end{definitionbox}
+
+% --- NEW ADDITIONS FOR UNIT II ---
+\subsection{Master Solving Guide: Introduction to Vector Spaces}
+
+Unit II abstract hai, isliye iske steps ko clear rakhna zaroori hai.
+
+\subsubsection{Algorithm: Subspace Test Recipe}
+Syllabus me koi subset $W$ diya hoga aur pucha jayega ki kya yeh subspace hai?
+\begin{itemize}
+    \item **Step 1:** Zero vector $\mathbf{0}$ ko check karein. Agar variables ko $0$ rakhne par equation satisfy ho rahi hai ($0 \in W$), toh aage badhein. Nahi toh seedhe *NO* bol dein.
+    \item **Step 2:** Do random vectors lein $u, v \in W$ aur check karein ki kya unka sum $u+v$ subset ki di hui original equation ko satisfy karta hai.
+    \item **Step 3:** Vector $u \in W$ ko scalar $c$ se multiply karke check karein ki kya $cu$ subset ki equation ko satisfy karta hai. Agar teeno check pass, toh *YES, it is a subspace*.
+\end{itemize}
+
+\subsubsection{Algorithm: Basis \& Dimension of Subspace with equations}
+Agar koi subspace equations ki form me hai (jaise $x+2y-z = 0$):
+\begin{enumerate}
+    \item Ek variable ko baki variables ke terms me likhiye: $z = x + 2y$.
+    \item General vector me us variable ki value put kijiye: $[x, y, z]^T = [x, y, x+2y]^T$.
+    \item Variables ko split kijiye taaki independent vectors ban skein: $x[1, 0, 1]^T + y[0, 1, 2]^T$.
+    \item Jo vectors baahar aaye, wo aapke **Basis** vectors hain, aur jitne vectors hain (yahan 2), wahi uski **Dimension** hai!
+\end{enumerate}
+
+\subsection{High-Yield 5/10 Marks Exam Questions (Unit II)}
+
+\begin{questionbox}[Question 1 (10 Marks): Symmetric Matrices Subspace Proof]
+Let $V = M_{2 \times 2}$ be the vector space of all $2 \times 2$ matrices over $\mathbb{R}$. Let $W$ be the set of all symmetric $2 \times 2$ matrices, i.e., $W = \{ A \in M_{2 \times 2} \mid A^T = A \}$. 
+(i) Prove that $W$ is a subspace of $V$. 
+(ii) Find a basis and the dimension of $W$.
+\end{questionbox}
+
+\begin{solutionbox}
+\textbf{Part (i): Subspace Proof}
+We will apply the 3-step Subspace Test on $W$:
+1. **Zero Vector Check:**
+   The zero vector in $M_{2\times 2}$ is the zero matrix $\mathbf{0} = \begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix}$.
+   Since $\mathbf{0}^T = \mathbf{0}$, the zero matrix belongs to $W$. Step 1 is passed!
+2. **Closure under Addition:**
+   Let $A, B \in W$. This means $A^T = A$ and $B^T = B$.
+   Consider the sum matrix $A+B$:
+   \[ (A + B)^T = A^T + B^T \quad (\text{Transpose property}) \]
+   Since $A^T = A$ and $B^T = B$:
+   \[ (A + B)^T = A + B \]
+   Thus, $A+B \in W$. Step 2 (closure under addition) is passed!
+3. **Closure under Scalar Multiplication:**
+   Let $A \in W$ (so $A^T = A$) and let $c \in \mathbb{R}$ be any scalar.
+   Consider the matrix $c A$:
+   \[ (c A)^T = c (A^T) \quad (\text{Transpose property}) \]
+   Since $A^T = A$:
+   \[ (c A)^T = c A \]
+   Thus, $c A \in W$. Step 3 (closure under scalar multiplication) is passed!
+   
+*Conclusion:* Since all three conditions are satisfied, $W$ is a subspace of $M_{2 \times 2}$.
+
+\textbf{Part (ii): Basis and Dimension}
+A general symmetric matrix $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$ satisfies $A^T = A$, which means:
+\[ \begin{bmatrix} a & c \\ b & d \end{bmatrix} = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \implies b = c \]
+So, a general element in $W$ can be written as:
+\[ A = \begin{bmatrix} a & b \\ b & d \end{bmatrix} \]
+We can decompose this matrix by separating the independent variables $a, b,$ and $d$:
+\[ \begin{bmatrix} a & b \\ b & d \end{bmatrix} = \begin{bmatrix} a & 0 \\ 0 & 0 \end{bmatrix} + \begin{bmatrix} 0 & b \\ b & 0 \end{bmatrix} + \begin{bmatrix} 0 & 0 \\ 0 & d \end{bmatrix} = a \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} + b \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} + d \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix} \]
+The three matrices that span $W$ are:
+\[ E_1 = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}, \quad E_2 = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}, \quad E_3 = \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix} \]
+Since these matrices are linearly independent and span $W$, they form a basis:
+\[ \text{Basis for } W = \left\{ \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}, \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}, \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix} \right\} \]
+The number of elements in the basis is 3. Therefore, $\dim(W) = 3$.
+\end{solutionbox}
+
+\vspace{0.8cm}
+
+\begin{questionbox}[Question 2 (5 Marks): Linear Independence of Polynomials]
+Determine if the following set of polynomials is linearly independent in $\mathbb{P}_2$:
+\[ S = \{ p_1(x) = 1 + x, \quad p_2(x) = x + x^2, \quad p_3(x) = 1 + x^2 \} \]
+\end{questionbox}
+
+\begin{solutionbox}
+We set up the vector equation:
+\[ c_1 p_1(x) + c_2 p_2(x) + c_3 p_3(x) = 0 \]
+Substitute the polynomials:
+\[ c_1 (1 + x) + c_2 (x + x^2) + c_3 (1 + x^2) = 0 \]
+Group the terms by powers of $x$:
+\[ (c_1 + c_3) \cdot 1 + (c_1 + c_2) \cdot x + (c_2 + c_3) \cdot x^2 = 0 \]
+For this polynomial to be identically zero, the coefficients of $1, x,$ and $x^2$ must all be 0:
+\begin{align*}
+c_1 + c_3 &= 0 \\
+c_1 + c_2 &= 0 \\
+c_2 + c_3 &= 0
+\end{align*}
+Let's solve this system:
+1. From equation 1: $c_1 = -c_3$.
+2. From equation 2: $c_2 = -c_1 = -(-c_3) = c_3$.
+3. Substitute into equation 3: $c_3 + c_3 = 0 \implies 2c_3 = 0 \implies c_3 = 0$.
+If $c_3 = 0$, then $c_2 = 0$ and $c_1 = 0$.
+
+*Conclusion:* Since the only solution is the trivial solution ($c_1 = c_2 = c_3 = 0$), the set of polynomials $S$ is **linearly independent (LI)** in $\mathbb{P}_2$.
+\end{solutionbox}
+
+\vspace{0.8cm}
+
+\begin{questionbox}[Question 3 (10 Marks): Span and Redundancy in $\mathbb{R}^4$]
+Let $S = \{ v_1, v_2, v_3, v_4 \}$ be a set of vectors in $\mathbb{R}^4$, where:
+\[ v_1 = \begin{bmatrix} 1 \\ 1 \\ 0 \\ 1 \end{bmatrix}, \quad v_2 = \begin{bmatrix} 1 \\ 0 \\ 1 \\ 1 \end{bmatrix}, \quad v_3 = \begin{bmatrix} 3 \\ 1 \\ 2 \\ 3 \end{bmatrix}, \quad v_4 = \begin{bmatrix} 0 \\ 1 \\ -1 \\ 0 \end{bmatrix} \]
+(i) Find a basis for the subspace spanned by $S$.
+(ii) Express the redundant vectors as a linear combination of the basis vectors.
+\end{questionbox}
+
+\begin{solutionbox}
+\textbf{Step 1: Construct the matrix with vectors as columns and find Row Echelon Form:}
+\[ A = \begin{bmatrix} 1 & 1 & 3 & 0 \\ 1 & 0 & 1 & 1 \\ 0 & 1 & 2 & -1 \\ 1 & 1 & 3 & 0 \end{bmatrix} \]
+Apply $R_2 \to R_2 - R_1$ and $R_4 \to R_4 - R_1$:
+\[ \begin{bmatrix} 1 & 1 & 3 & 0 \\ 0 & -1 & -2 & 1 \\ 0 & 1 & 2 & -1 \\ 0 & 0 & 0 & 0 \end{bmatrix} \]
+Normalize Row 2: $R_2 \to -1 \cdot R_2$:
+\[ \begin{bmatrix} 1 & 1 & 3 & 0 \\ 0 & 1 & 2 & -1 \\ 0 & 1 & 2 & -1 \\ 0 & 0 & 0 & 0 \end{bmatrix} \]
+Apply $R_3 \to R_3 - R_2$:
+\[ \begin{bmatrix} 1 & 1 & 3 & 0 \\ 0 & 1 & 2 & -1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix} \]
+
+\textbf{Step 2: Find the Basis:}
+The pivots are in the **first and second columns**. 
+Therefore, the original vectors $v_1$ and $v_2$ corresponding to these columns form a basis for $\text{span}(S)$:
+\[ \text{Basis} = \left\{ \begin{bmatrix} 1 \\ 1 \\ 0 \\ 1 \end{bmatrix}, \begin{bmatrix} 1 \\ 0 \\ 1 \\ 1 \end{bmatrix} \right\} \]
+The dimension of the span is $2$.
+
+\textbf{Step 3: Express redundant vectors ($v_3, v_4$) as combinations:}
+Let's find the RREF of the matrix to read the dependencies directly.
+Apply $R_1 \to R_1 - R_2$ on the REF matrix:
+\[ \text{RREF} = \begin{bmatrix} 1 & 0 & 1 & 1 \\ 0 & 1 & 2 & -1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix} \]
+From the RREF columns:
+1. For column 3 (vector $v_3$): $v_3 = 1 v_1 + 2 v_2$.
+   *(Verification: $1[1, 1, 0, 1]^T + 2[1, 0, 1, 1]^T = [3, 1, 2, 3]^T = v_3$. Perfect!)*
+2. For column 4 (vector $v_4$): $v_4 = 1 v_1 - 1 v_2$.
+   *(Verification: $1[1, 1, 0, 1]^T - 1[1, 0, 1, 1]^T = [0, 1, -1, 0]^T = v_4$. Perfect!)*
+\end{solutionbox}
+
+\vspace{0.8cm}
+
+\begin{questionbox}[Question 4 (10 Marks): Core Vector Space Proofs]
+Prove the following fundamental theorems:
+(i) Prove that any set of vectors $S = \{v_1, v_2, \dots, v_k\}$ in a vector space $V$ that contains the zero vector $\mathbf{0}$ is linearly dependent.
+(ii) Prove that if a set of vectors $S = \{v_1, v_2, \dots, v_k\}$ is linearly independent, then any non-empty subset $S'$ of $S$ is also linearly independent.
+\end{questionbox}
+
+\begin{solutionbox}
+\textbf{Part (i): Proof of Zero Vector Dependency}
+Let $S = \{v_1, v_2, \dots, v_{k-1}, \mathbf{0}\}$ be a set of vectors containing the zero vector (without loss of generality, we can assume the last vector is $\mathbf{0}$).
+To check for linear dependence, we set up the vector equation:
+\[ c_1 v_1 + c_2 v_2 + \dots + c_{k-1} v_{k-1} + c_k \mathbf{0} = \mathbf{0} \]
+Let's choose the scalars as follows:
+\[ c_1 = 0, \quad c_2 = 0, \quad \dots, \quad c_{k-1} = 0, \quad \text{and } c_k = 5 \quad (\text{any non-zero real number}) \]
+Substitute these scalars into the equation:
+\[ 0 v_1 + 0 v_2 + \dots + 0 v_{k-1} + 5 \mathbf{0} = \mathbf{0} + \mathbf{0} + \dots + \mathbf{0} + \mathbf{0} = \mathbf{0} \]
+This is a non-trivial solution to the vector equation because at least one scalar ($c_k = 5$) is non-zero.
+By definition, since a non-trivial solution exists, the set $S$ is **linearly dependent**.
+
+\textbf{Part (ii): Proof of Subset Independence}
+Let $S = \{v_1, v_2, \dots, v_k\}$ be a linearly independent set. 
+Let $S' = \{v_1, v_2, \dots, v_r\}$ (where $1 \le r < k$) be a non-empty subset of $S$.
+We want to prove that $S'$ is linearly independent. We will prove this by contradiction.
+
+Assume that $S'$ is **linearly dependent**.
+By definition, there exist scalars $c_1, c_2, \dots, c_r$, not all zero, such that:
+\[ c_1 v_1 + c_2 v_2 + \dots + c_r v_r = \mathbf{0} \]
+Now, let's extend this equation to include the remaining vectors of the larger set $S$ by multiplying them by scalar coefficients of $0$:
+\[ c_1 v_1 + c_2 v_2 + \dots + c_r v_r + 0 v_{r+1} + 0 v_{r+2} + \dots + 0 v_k = \mathbf{0} \]
+Since not all $c_1, c_2, \dots, c_r$ are zero, this represents a **non-trivial solution** for the full set $S$.
+This implies that the set $S$ is linearly dependent, which directly contradicts our initial assumption that $S$ is linearly independent.
+Therefore, our assumption that $S'$ is dependent must be false.
+Thus, the subset $S'$ must be **linearly independent**.
+\end{solutionbox}
+
+\vspace{0.8cm}
+
+\begin{questionbox}[Question 5 (10 Marks): Basis Extension]
+Given the following linearly independent set of vectors in $\mathbb{R}^4$:
+\[ S = \left\{ u_1 = \begin{bmatrix} 1 \\ 1 \\ 0 \\ 0 \end{bmatrix}, \quad u_2 = \begin{bmatrix} 0 \\ 1 \\ 1 \\ 0 \end{bmatrix} \right\} \]
+Extend this set to form a complete basis for $\mathbb{R}^4$.
+\end{questionbox}
+
+\begin{solutionbox}
+\textbf{Step 1: Algorithmic Concept:}
+To extend a linearly independent set to a basis of $\mathbb{R}^4$, we can append the standard basis vectors $\{e_1, e_2, e_3, e_4\}$ to the set, construct a matrix, and use row reduction. The pivot columns will tell us which standard vectors can be added to $u_1, u_2$ to form a basis.
+
+\textbf{Step 2: Construct the Matrix $[u_1 \quad u_2 \quad e_1 \quad e_2 \quad e_3 \quad e_4]$:}
+\[ A = \begin{bmatrix} 1 & 0 & 1 & 0 & 0 & 0 \\ 1 & 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix} \]
+
+\textbf{Step 3: Perform Row Reduction to Echelon Form:}
+Apply $R_2 \to R_2 - R_1$:
+\[ \begin{bmatrix} 1 & 0 & 1 & 0 & 0 & 0 \\ 0 & 1 & -1 & 1 & 0 & 0 \\ 0 & 1 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix} \]
+Apply $R_3 \to R_3 - R_2$:
+\[ \begin{bmatrix} 1 & 0 & 1 & 0 & 0 & 0 \\ 0 & 1 & -1 & 1 & 0 & 0 \\ 0 & 0 & 1 & -1 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix} \]
+This is in Row Echelon Form! Let's identify the columns containing pivots:
+* Column 1 (contains pivot in Row 1) $\implies$ vector $u_1$.
+* Column 2 (contains pivot in Row 2) $\implies$ vector $u_2$.
+* Column 3 (contains pivot in Row 3) $\implies$ standard vector $e_1$.
+* Column 6 (contains pivot in Row 4) $\implies$ standard vector $e_4$.
+
+\textbf{Answer:} 
+To extend $S$ to a basis, we select the standard vectors $e_1$ and $e_4$:
+\[ \text{Extended Basis for } \mathbb{R}^4 = \left\{ \begin{bmatrix} 1 \\ 1 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \end{bmatrix} \right\} \]
+\end{solutionbox}
+
+\newpage
+
+% =========================================================================
+% UNIT III
+% =========================================================================
+\section{UNIT - III: Linear Transformations}
+
+Welcome to the final unit! Ab hum seekhenge ki kaise ek vector space ke vectors ko doosre vector space ke vectors me convert kiya jata hai, aur un transitions ke peeche ke mathematical rules kya hote hain.
+
+\subsection{Definition and Properties}
+
+\begin{definitionbox}[Linear Transformation]
+A mapping $T: V \to W$ from a vector space $V$ into a vector space $W$ is called a \textbf{linear transformation} if it satisfies the following two properties for all $u, v \in V$ and scalar $c \in \mathbb{R}$:
+\begin{enumerate}
+    \item \textbf{Additivity:} $T(u + v) = T(u) + T(v)$
+    \item \textbf{Homogeneity:} $T(cu) = c T(u)$
+\end{enumerate}
+Combined, we can write: $T(cu + dv) = cT(u) + dT(v)$.
+\end{definitionbox}
+
+\begin{hinglishbox}
+\textbf{Linear Transformation ka matlab:}
+Yeh ek aisi machine/function ($T$) hai jo $V$ ke vectors ko $W$ me convert karti hai bina mathematical structure ko tode:
+\begin{itemize}
+    \item Machine me do vectors ko add karke dalo, ya alag-alag daal kar output add karo, result same aayega.
+    \item Vector ko scale karke machine me dalo, ya output ko scale karo, result same aayega.
+\end{itemize}
+\textbf{Elementary property:} Kisi bhi linear transformation me zero vector humesha zero vector par hi map hota hai ($T(0) = 0$).
+\end{hinglishbox}
+
+\subsection{Matrix of a Linear Transformation}
+Agar $T: V \to W$ ek linear transformation hai, toh hum use hamesha ek Matrix Multiplication ke roop me likh sakte hain. Agar standard basis $\mathbb{R}^n$ me hai:
+\[ T(x) = A x \]
+Where $A$ is the standard matrix of $T$. 
+To find $A$, we apply $T$ to the standard basis vectors $e_1, e_2, \dots, e_n$ and make them the columns of $A$:
+\[ A = \begin{bmatrix} T(e_1) & T(e_2) & \dots & T(e_n) \end{bmatrix} \]
+
+\subsection{Kernel, Range and Rank-Nullity Theorem}
+
+\begin{definitionbox}[Kernel and Range]
+Let $T: V \to W$ be a linear transformation.
+\begin{itemize}
+    \item \textbf{Kernel (Null Space):} The kernel of $T$ (denoted by $\ker(T)$ or $\text{Null}(T)$) is the set of all vectors in $V$ that map to the zero vector in $W$:
+    \[ \ker(T) = \{ v \in V \mid T(v) = 0_W \} \]
+    The dimension of $\ker(T)$ is called the \textbf{nullity} of $T$.
+    \item \textbf{Range (Image):} The range of $T$ (denoted by $\text{Range}(T)$) is the set of all vectors in $W$ that are images of some vectors in $V$:
+    \[ \text{Range}(T) = \{ T(v) \mid v \in V \} \]
+    The dimension of $\text{Range}(T)$ is called the \textbf{rank} of $T$.
+\end{itemize}
+\end{definitionbox}
+
+\begin{theorembox}[Rank-Nullity Theorem / Dimension Theorem]
+Let $T: V \to W$ be a linear transformation where $V$ is finite-dimensional. Then:
+\[ \text{rank}(T) + \text{nullity}(T) = \dim(V) \]
+\nobreak
+\end{theorembox}
+
+\begin{hinglishbox}
+\textbf{Rank-Nullity ka matlab:}
+Kisi bhi system me, pure inputs ki dimensions ($\dim(V)$) do parts me bat ti hai mapping ke baad:
+1. Jo outputs ki dimensions me transform ho gayi ($\text{rank}(T)$).
+2. Jo cancel out hokar zero vector par collapse ho gayi ($\text{nullity}(T)$).
+Dono ka sum hamesha total input dimensions ke barabar hota hai.
+\end{hinglishbox}
+
+\subsection{One-to-One, Onto \& Isomorphisms}
+
+\begin{definitionbox}[One-to-One, Onto \& Isomorphic]
+Let $T: V \to W$ be a linear transformation.
+\begin{itemize}
+    \item \textbf{One-to-One (Injective):} $T$ is one-to-one if $T(u) = T(v) \implies u = v$. Equivalently, $T$ is one-to-one if and only if $\ker(T) = \{ 0 \}$ (i.e., $\text{nullity}(T) = 0$).
+    \item \textbf{Onto (Surjective):} $T$ is onto if $\text{Range}(T) = W$ (i.e., $\text{rank}(T) = \dim(W)$).
+    \item \textbf{Isomorphism:} A linear transformation $T: V \to W$ that is both one-to-one and onto is called an \textbf{Isomorphism}. The spaces $V$ and $W$ are said to be **isomorphic** ($V \cong W$).
+\end{itemize}
+\end{definitionbox}
+
+\begin{hinglishbox}
+\textbf{Isomorphic Vector Spaces ka kya matlab hai?}
+Isomorphism ka simple matlab hai **"Mathematical Twins"**. Agar do vector spaces $V$ aur $W$ isomorphic hain ($V \cong W$), toh iska matlab hai dono ki dimensions barabar hain aur unki mathematical structure bilkul same hai, bas unke elements ke naam aur roop alag hain (jaise $\mathbb{R}^3$ aur degree $\le 2$ wale polynomials $\mathbb{P}_2$ dono isomorphic hain kyuki dono ki dimension $3$ hai!).
+\end{hinglishbox}
+
+% --- NEW ADDITIONS FOR UNIT III ---
+\subsection{Master Solving Guide: Linear Transformations}
+
+Linear Transformations ke questions solve karte waqt ye clear procedures follow karein:
+
+\subsubsection{Algorithm: Linearity Verification Test}
+Agar koi mapping $T$ di ho aur pucha ho ki kya yeh Linear Transformation hai?
+\begin{enumerate}
+    \item **Step 1 (Check Zero):** Pehle $T(\mathbf{0})$ nikalye. Agar output $\mathbf{0}$ nahi aa raha, toh transformation non-linear hai. Aage solve karne ki zaroorat nahi!
+    \item **Step 2 (Additivity):** Do abstract vectors $u = [u_1, u_2]^T$ aur $v = [v_1, v_2]^T$ lijiye. $T(u+v)$ aur $T(u) + T(v)$ nikal kar dono ko barabar prove kijiye.
+    \item **Step 3 (Homogeneity):** $T(cu)$ aur $c T(u)$ ko barabar prove kijiye. Agar dono properties satisfy ho gayi, toh $T$ linear hai.
+\end{enumerate}
+
+\subsubsection{Algorithm: Finding Kernel Basis \& Nullity Step-by-Step}
+\begin{enumerate}
+    \item **Step 1:** $T(x) = \mathbf{0}$ equation likhiye. Standard matrix $A$ lekar $Ax = 0$ homogeneous system banaiye.
+    \item **Step 2:** Matrix $A$ ko row reduction ke through REF/RREF form me convert kijiye.
+    \item **Step 3:** Free variables ko basic parameters ($t, s$) set kijiye aur linear system solve kijiye.
+    \item **Step 4:** Vector ko coefficients ke according filter karke **Basis** likhiye. Jitne vectors hain basis me, wahi aapki **Nullity** hai.
+\end{enumerate}
+
+\subsection{High-Yield 5/10 Marks Exam Questions (Unit III)}
+
+\begin{questionbox}[Question 1 (10 Marks): Projection mapping \& Rank-Nullity Verification]
+Let $T: \mathbb{R}^3 \to \mathbb{R}^3$ be a projection transformation defined by:
+\[ T(x, y, z) = (x, y, 0)^T \]
+(i) Find the standard matrix $A$ of $T$. 
+(ii) Find a basis and the dimension of the Kernel and Range of $T$. 
+(iii) Verify the Rank-Nullity Theorem.
+\end{questionbox}
+
+\begin{solutionbox}
+\textbf{Part (i): Standard Matrix Construction}
+Standard basis vectors for $\mathbb{R}^3$ are $e_1 = (1,0,0)^T, e_2 = (0,1,0)^T,$ and $e_3 = (0,0,1)^T$.
+Let's apply the transformation $T(x,y,z) = (x,y,0)^T$ to each basis vector:
+1. $T(e_1) = T(1,0,0) = (1,0,0)^T$.
+2. $T(e_2) = T(0,1,0) = (0,1,0)^T$.
+3. $T(e_3) = T(0,0,1) = (0,0,0)^T$.
+Place these vectors as columns to construct the standard matrix $A$:
+\[ A = \begin{bmatrix} T(e_1) & T(e_2) & T(e_3) \end{bmatrix} = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0 \end{bmatrix} \]
+
+\textbf{Part (ii): Basis and Dimension of Kernel and Range}
+* **Kernel ($\ker(T)$):** Solve $T(x, y, z) = (0, 0, 0)^T$.
+  \[ (x, y, 0)^T = (0, 0, 0)^T \implies x = 0, \quad y = 0, \quad \text{and } z \text{ is a free variable}. \]
+  So, any vector in the kernel is of the form:
+  \[ \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ t \end{bmatrix} = t \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix} \]
+  Basis for $\ker(T)$ is:
+  \[ \text{Basis}_{\ker} = \left\{ \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix} \right\} \]
+  Since there is only 1 vector in the basis, the dimension of the kernel is:
+  \[ \text{nullity}(T) = \dim(\ker(T)) = 1 \]
+* **Range ($\text{Range}(T)$):** The range is spanned by the pivot columns of the standard matrix $A$.
+  Looking at matrix $A$, the first and second columns contain pivots:
+  \[ \text{Basis}_{\text{Range}} = \left\{ \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \right\} \]
+  The number of vectors in this basis is 2. Therefore, the dimension of the range is:
+  \[ \text{rank}(T) = \dim(\text{Range}(T)) = 2 \]
+
+\textbf{Part (iii): Verification of Rank-Nullity Theorem}
+The input space is $V = \mathbb{R}^3$, so $\dim(V) = 3$.
+Let's verify the theorem:
+\[ \text{rank}(T) + \text{nullity}(T) = 2 + 1 = 3 = \dim(V) \]
+The Rank-Nullity Theorem is verified perfectly!
+\end{solutionbox}
+
+\vspace{0.8cm}
+
+\begin{questionbox}[Question 2 (10 Marks): Invertibility and Inverse Transformation]
+Show that the linear transformation $T: \mathbb{R}^3 \to \mathbb{R}^3$ defined by:
+\[ T(x, y, z) = (x + y, y + z, x + z)^T \]
+is invertible, and find the explicit formula for the inverse transformation $T^{-1}(x, y, z)$.
+\end{questionbox}
+
+\begin{solutionbox}
+\textbf{Step 1: Construct the standard matrix $A$ and check its invertibility:}
+Applying $T$ to the standard basis:
+1. $T(e_1) = T(1,0,0) = (1,0,1)^T$.
+2. $T(e_2) = T(0,1,0) = (1,1,0)^T$.
+3. $T(e_3) = T(0,0,1) = (0,1,1)^T$.
+So, standard matrix $A$ is:
+\[ A = \begin{bmatrix} 1 & 1 & 0 \\ 0 & 1 & 1 \\ 1 & 0 & 1 \end{bmatrix} \]
+To show $T$ is invertible, let's calculate the determinant of $A$:
+\[ \det(A) = 1(1 - 0) - 1(0 - 1) + 0 = 1 + 1 = 2 \]
+Since $\det(A) = 2 \neq 0$, the matrix $A$ is invertible. Therefore, the linear transformation $T$ is invertible!
+
+\textbf{Step 2: Find the inverse matrix $A^{-1}$ using Row Reduction $[A \mid I]$:}
+\[ [A \mid I] = \begin{bmatrix} 1 & 1 & 0 & \bigm| & 1 & 0 & 0 \\ 0 & 1 & 1 & \bigm| & 0 & 1 & 0 \\ 1 & 0 & 1 & \bigm| & 0 & 0 & 1 \end{bmatrix} \]
+Apply $R_3 \to R_3 - R_1$:
+\[ \begin{bmatrix} 1 & 1 & 0 & \bigm| & 1 & 0 & 0 \\ 0 & 1 & 1 & \bigm| & 0 & 1 & 0 \\ 0 & -1 & 1 & \bigm| & -1 & 0 & 1 \end{bmatrix} \]
+Apply $R_3 \to R_3 + R_2$ and $R_1 \to R_1 - R_2$:
+\[ \begin{bmatrix} 1 & 0 & -1 & \bigm| & 1 & -1 & 0 \\ 0 & 1 & 1 & \bigm| & 0 & 1 & 0 \\ 0 & 0 & 2 & \bigm| & -1 & 1 & 1 \end{bmatrix} \]
+Normalize Row 3: $R_3 \to \frac{1}{2} R_3$:
+\[ \begin{bmatrix} 1 & 0 & -1 & \bigm| & 1 & -1 & 0 \\ 0 & 1 & 1 & \bigm| & 0 & 1 & 0 \\ 0 & 0 & 1 & \bigm| & -0.5 & 0.5 & 0.5 \end{bmatrix} \]
+Apply $R_1 \to R_1 + R_3$ and $R_2 \to R_2 - R_3$:
+\[ \begin{bmatrix} 1 & 0 & 0 & \bigm| & 0.5 & -0.5 & 0.5 \\ 0 & 1 & 0 & \bigm| & 0.5 & 0.5 & -0.5 \\ 0 & 0 & 1 & \bigm| & -0.5 & 0.5 & 0.5 \end{bmatrix} \]
+Thus, the inverse matrix is:
+\[ A^{-1} = \frac{1}{2} \begin{bmatrix} 1 & -1 & 1 \\ 1 & 1 & -1 \\ -1 & 1 & 1 \end{bmatrix} \]
+
+\textbf{Step 3: Write the explicit formula for $T^{-1}(u, v, w)$:}
+\[ T^{-1} \begin{bmatrix} u \\ v \\ w \end{bmatrix} = A^{-1} \begin{bmatrix} u \\ v \\ w \end{bmatrix} = \frac{1}{2} \begin{bmatrix} u - v + w \\ u + v - w \\ -u + v + w \end{bmatrix} \]
+So, the inverse transformation is:
+\[ T^{-1}(u, v, w) = \left( \frac{u - v + w}{2}, \frac{u + v - w}{2}, \frac{-u + v + w}{2} \right)^T \]
+\end{solutionbox}
+
+\vspace{0.8cm}
+
+\begin{questionbox}[Question 3 (10 Marks): Rank-Nullity Theorem Theoretical Proof]
+State and theoretically prove the Rank-Nullity Theorem (Dimension Theorem) for a linear transformation $T: V \to W$ where $V$ is a finite-dimensional vector space.
+\end{questionbox}
+
+\begin{solutionbox}
+\textbf{Statement:} Let $T: V \to W$ be a linear transformation. If $V$ is finite-dimensional, then:
+\[ \dim(\text{Range}(T)) + \dim(\ker(T)) = \dim(V) \quad \text{i.e., } \text{rank}(T) + \text{nullity}(T) = \dim(V) \]
+
+\textbf{Proof:}
+Let $\dim(V) = n$ and let $\dim(\ker(T)) = k$ (so the nullity is $k$).
+Let $B_1 = \{u_1, u_2, \dots, u_k\}$ be a basis for the subspace $\ker(T) \subseteq V$.
+Since $B_1$ is linearly independent in $V$, by the Basis Extension Theorem, we can extend it to form a complete basis for the entire vector space $V$.
+Let this extended basis for $V$ be:
+\[ B = \{u_1, u_2, \dots, u_k, v_1, v_2, \dots, v_r\} \]
+where $k + r = n$ (which means $r = n - k$).
+To prove that $\text{rank}(T) + \text{nullity}(T) = \dim(V)$, we must show that $\dim(\text{Range}(T)) = r$ (the number of extended vectors).
+We can do this by proving that the set:
+\[ B' = \{T(v_1), T(v_2), \dots, T(v_r)\} \]
+is a valid basis for the range space $\text{Range}(T) \subseteq W$. We must prove two things:
+
+\textbf{1. Proving $B'$ spans $\text{Range}(T)$:}
+Any vector $w \in \text{Range}(T)$ is of the form $w = T(x)$ for some $x \in V$.
+Since $B$ is a basis for $V$, we can write $x$ as a linear combination:
+\[ x = c_1 u_1 + c_2 u_2 + \dots + c_k u_k + d_1 v_1 + d_2 v_2 + \dots + d_r v_r \]
+Applying the linear transformation $T$:
+\[ T(x) = T(c_1 u_1 + \dots + c_k u_k + d_1 v_1 + \dots + d_r v_r) \]
+Using linearity of $T$:
+\[ T(x) = c_1 T(u_1) + \dots + c_k T(u_k) + d_1 T(v_1) + \dots + d_r T(v_r) \]
+Since $u_1, \dots, u_k$ are in $\ker(T)$, we know $T(u_i) = \mathbf{0}$:
+\[ T(x) = c_1 \mathbf{0} + \dots + c_k \mathbf{0} + d_1 T(v_1) + \dots + d_r T(v_r) \]
+\[ T(x) = d_1 T(v_1) + d_2 T(v_2) + \dots + d_r T(v_r) \]
+Thus, any $w = T(x)$ in the range can be written as a combination of elements in $B'$. So $B'$ spans $\text{Range}(T)$.
+
+\textbf{2. Proving $B'$ is linearly independent:}
+Set up the linear independence vector equation in $W$:
+\[ a_1 T(v_1) + a_2 T(v_2) + \dots + a_r T(v_r) = \mathbf{0}_W \]
+Using linearity of $T$:
+\[ T(a_1 v_1 + a_2 v_2 + \dots + a_r v_r) = \mathbf{0}_W \]
+This implies that the vector $(a_1 v_1 + a_2 v_2 + \dots + a_r v_r)$ belongs to the kernel of $T$.
+Since $B_1 = \{u_1, \dots, u_k\}$ is a basis for $\ker(T)$, we can write this vector as a combination of basis vectors of $\ker(T)$:
+\[ a_1 v_1 + a_2 v_2 + \dots + a_r v_r = b_1 u_1 + b_2 u_2 + \dots + b_k u_k \]
+\[ b_1 u_1 + b_2 u_2 + \dots + b_k u_k - a_1 v_1 - a_2 v_2 - \dots - a_r v_r = \mathbf{0}_V \]
+Since $B = \{u_1, \dots, u_k, v_1, \dots, v_r\}$ is a basis for $V$, its vectors are linearly independent. Thus, all the scalar coefficients in the equation must be 0:
+\[ b_i = 0 \text{ for all } i, \quad \text{and } a_j = 0 \text{ for all } j \]
+Specifically, $a_1 = a_2 = \dots = a_r = 0$.
+Therefore, the set $B'$ is linearly independent!
+
+*Conclusion:* Since $B'$ is linearly independent and spans $\text{Range}(T)$, it is a basis for $\text{Range}(T)$.
+Thus, $\dim(\text{Range}(T)) = r = n - k$.
+Therefore:
+\[ \dim(\text{Range}(T)) + \dim(\ker(T)) = (n - k) + k = n = \dim(V) \]
+Hence the Rank-Nullity Theorem is theoretically proved!
+\end{solutionbox}
+
+\vspace{0.8cm}
+
+\begin{questionbox}[Question 4 (10 Marks): Isomorphism Construction]
+Prove that the vector space $V = \{ A \in M_{2 \times 2} \mid A^T = A \}$ of all symmetric $2 \times 2$ matrices is isomorphic to $\mathbb{R}^3$, by constructing an explicit linear transformation $T: V \to \mathbb{R}^3$ and proving it is bijective.
+\end{questionbox}
+
+\begin{solutionbox}
+We know from Unit II that any symmetric $2 \times 2$ matrix is of the form $A = \begin{bmatrix} a & b \\ b & d \end{bmatrix}$ and $\dim(V) = 3$.
+Since $\dim(\mathbb{R}^3) = 3$ is equal to $\dim(V)$, the two spaces are isomorphic. Let's construct and prove the mapping.
+
+\textbf{Step 1: Define the mapping $T: V \to \mathbb{R}^3$:}
+For any matrix $A = \begin{bmatrix} a & b \\ b & d \end{bmatrix} \in V$, define:
+\[ T\left( \begin{bmatrix} a & b \\ b & d \end{bmatrix} \right) = \begin{bmatrix} a \\ b \\ d \end{bmatrix} \]
+
+\textbf{Step 2: Prove $T$ is a Linear Transformation:}
+Let $A = \begin{bmatrix} a_1 & b_1 \\ b_1 & d_1 \end{bmatrix}$ and $B = \begin{bmatrix} a_2 & b_2 \\ b_2 & d_2 \end{bmatrix}$ be two symmetric matrices in $V$, and $c$ be a scalar:
+1. **Additivity Check:**
+   \[ A + B = \begin{bmatrix} a_1+a_2 & b_1+b_2 \\ b_1+b_2 & d_1+d_2 \end{bmatrix} \]
+   \[ T(A+B) = \begin{bmatrix} a_1+a_2 \\ b_1+b_2 \\ d_1+d_2 \end{bmatrix} = \begin{bmatrix} a_1 \\ b_1 \\ d_1 \end{bmatrix} + \begin{bmatrix} a_2 \\ b_2 \\ d_2 \end{bmatrix} = T(A) + T(B) \]
+2. **Homogeneity Check:**
+   \[ c A = \begin{bmatrix} c a_1 & c b_1 \\ c b_1 & c d_1 \end{bmatrix} \]
+   \[ T(c A) = \begin{bmatrix} c a_1 \\ c b_1 \\ c d_1 \end{bmatrix} = c \begin{bmatrix} a_1 \\ b_1 \\ d_1 \end{bmatrix} = c T(A) \]
+Thus, $T$ is a valid linear transformation.
+
+\textbf{Step 3: Prove $T$ is One-to-One (Injective):}
+We analyze the kernel of $T$. Set $T(A) = \mathbf{0}$:
+\[ T\left( \begin{bmatrix} a & b \\ b & d \end{bmatrix} \right) = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} \implies \begin{bmatrix} a \\ b \\ d \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} \implies a=0, b=0, d=0 \]
+This implies $A = \begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix} = \mathbf{0}_V$.
+Since the kernel of $T$ contains only the zero matrix ($\ker(T) = \{\mathbf{0}\}$), the mapping $T$ is **one-to-one (injective)**.
+
+\textbf{Step 4: Prove $T$ is Onto (Surjective):}
+Let $y = \begin{bmatrix} y_1 \\ y_2 \\ y_3 \end{bmatrix}$ be any vector in the output space $\mathbb{R}^3$.
+We must find a symmetric matrix $A \in V$ such that $T(A) = y$.
+Let's construct:
+\[ A = \begin{bmatrix} y_1 & y_2 \\ y_2 & y_3 \end{bmatrix} \]
+Since this matrix is symmetric, $A \in V$. Applying the transformation:
+\[ T(A) = T\left( \begin{bmatrix} y_1 & y_2 \\ y_2 & y_3 \end{bmatrix} \right) = \begin{bmatrix} y_1 \\ y_2 \\ y_3 \end{bmatrix} = y \]
+Thus, every element in the output space $\mathbb{R}^3$ has a pre-image in $V$. The mapping is **onto (surjective)**.
+
+*Conclusion:* Since the linear transformation $T$ is both one-to-one and onto (bijective), $T$ is a valid **Isomorphism**. Therefore, $V \cong \mathbb{R}^3$.
+\end{solutionbox}
+
+\vspace{0.8cm}
+
+\begin{questionbox}[Question 5 (5 Marks): Linearity Check for Non-Linear terms]
+Determine if the mapping $T: \mathbb{R}^2 \to \mathbb{R}^2$ defined by:
+\[ T(x, y) = (xy, \quad x + 1)^T \]
+is a linear transformation. If not, show exactly where the axioms fail.
+\end{questionbox}
+
+\begin{solutionbox}
+Let's test this transformation using our standard algorithms:
+
+\textbf{Step 1: Check $T(\mathbf{0})$:}
+Let $(x, y) = (0, 0)$. Apply the transformation:
+\[ T(0, 0) = (0 \cdot 0, \quad 0 + 1)^T = (0, 1)^T \]
+Since $T(0, 0) = (0, 1)^T \neq (0, 0)^T$, the zero vector does not map to the zero vector.
+This is a direct violation of the core linear property. Thus, $T$ cannot be linear!
+
+\textbf{Step 2: Show specific axiom failure with numerical counter-example:}
+Let's test the scalar multiplication homogeneity axiom $T(c u) = c T(u)$ for $u = (1, 1)^T$ and $c = 2$:
+* **LHS ($T(cu)$):**
+  \[ cu = 2(1, 1)^T = (2, 2)^T \]
+  \[ T(2, 2) = (2 \cdot 2, \quad 2 + 1)^T = (4, 3)^T \]
+* **RHS ($c T(u)$):**
+  \[ T(1, 1) = (1 \cdot 1, \quad 1 + 1)^T = (1, 2)^T \]
+  \[ c T(1, 1) = 2 \cdot (1, 2)^T = (2, 4)^T \]
+Since LHS $\neq$ RHS ($(4, 3)^T \neq (2, 4)^T$), the homogeneity axiom fails completely! The mapping is **not a linear transformation**.
+\end{solutionbox}
+
+\newpage
+\begin{center}
+    \vspace*{4cm}
+    {\Large\bfseries\color{RoyalBlue} Congratulations!}\\[0.5cm]
+    {\large Aapne pure Linear Algebra DSC-2 ke syllabus ko complete concepts, solved problems, step-by-step master algorithms aur university exam questions ke sath padh liya hai. Best of luck for your exams! Phod dena!}\\[1.0cm]
+    \rule{0.5\linewidth}{1.0pt}
+\end{center}
+
+\end{document}

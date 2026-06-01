@@ -1,0 +1,1395 @@
+Electricity & Magnetism — Complete Course (PYQ-Oriented)
+
+===========================================================================
+Chapter 1: Electric Field Intensity (Most Important Foundation)
+===========================================================================
+
+Before learning:
+✅ Gauss Law 
+✅ Electric Dipole 
+✅ Electric Potential 
+✅ Capacitor 
+
+You must understand Electric Field. 
+
+Why Do We Need Electric Field? 
+Suppose: 
++Q                    
++q 
+●  ----------------->  ● 
+
+Question: 
+How does charge (+Q) know that another charge (+q) exists? 
+There is no physical contact. 
+To explain this interaction, physicists introduced the concept of Electric Field. 
+
+What is Electric Field? 
+Definition 
+The region around a charged body where another charge experiences an electric force is called 
+an Electric Field. 
+ 
+Diagram 
+         Electric Field Region 
+ 
+      ↗     ↑     ↖ 
+ 
+         \  |  / 
+ 
+            +Q 
+ 
+         /  |  \ 
+ 
+      ↘     ↓     ↙ 
+ 
+ 
+Electric Field Intensity 
+Definition 
+Electric field intensity at a point is defined as the force experienced by a unit positive test charge 
+placed at that point. 
+ 
+Formula 
+[ 
+\boxed{ 
+E=\frac{F}{q_0} 
+} 
+] 
+where 
+(F) = force 
+(q_0) = test charge 
+
+Unit 
+[ 
+\boxed{ 
+N/C 
+} 
+] 
+or 
+[ 
+\boxed{ 
+V/m 
+} 
+] 
+
+Why Test Charge Must Be Positive? 
+By convention: 
+We define field direction as the direction of force on a positive charge. 
+
+Diagram 
++Q 
+● 
+↗ ↑ ↖ 
+ 
+      +q₀ 
+ 
+Force on +q₀ is outward. 
+ 
+ 
+Electric Field Due to a Point Charge 
+This derivation is very important because it is used later in: 
+✅ Dipole 
+✅ Gauss Law 
+✅ Potential 
+ 
+Diagram 
+         P 
+ 
+          ● 
+ 
+          | 
+          | r 
+          | 
+ 
+          ● +Q 
+ 
+ 
+Derivation 
+According to Coulomb's Law: 
+[ 
+F = \frac{1}{4\pi\epsilon_0} \frac{Qq_0}{r^2} 
+] 
+Electric field: 
+[ 
+E=\frac{F}{q_0} 
+] 
+Substituting, 
+[ 
+E = \frac{1}{4\pi\epsilon_0} \frac{Qq_0}{r^2 q_0} 
+] 
+Therefore, 
+[ 
+\boxed{ 
+E = \frac{1}{4\pi\epsilon_0} \frac{Q}{r^2} 
+} 
+] 
+ 
+Important Observation 
+Electric field varies as: 
+[ 
+E\propto\frac1{r^2} 
+] 
+Meaning: 
+If distance doubles, 
+[ 
+E\rightarrow \frac14 E 
+] 
+If distance triples, 
+[ 
+E\rightarrow \frac19 E 
+] 
+ 
+Direction of Electric Field 
+ 
+Positive Charge 
+Field lines move outward. 
+         ↑ 
+ 
+      ↖   |   ↗ 
+ 
+           + 
+ 
+      ↙   |   ↘ 
+ 
+          ↓ 
+ 
+ 
+Negative Charge 
+Field lines move inward. 
+         ↓ 
+ 
+      ↘   |   ↙ 
+ 
+           - 
+ 
+      ↗   |   ↖ 
+ 
+          ↑ 
+ 
+ 
+Electric Field Lines 
+Electric field can be represented using imaginary lines called field lines. 
+ 
+Properties 
+1. Start from Positive Charge 
+    + 
+   ↗ ↑ ↖ 
+ 
+ 
+2. End on Negative Charge 
+  ↘ ↓ ↙ 
+     - 
+ 
+ 
+3. Never Intersect 
+Wrong: 
+\ / 
+ X 
+/ \ 
+Field lines cannot cross. 
+
+4. Tangent Gives Direction 
+At every point: 
+The tangent to the field line gives field direction. 
+
+5. Density Shows Strength 
+Closer lines ⇒ Strong field 
+Far lines ⇒ Weak field 
+
+Electric Field Due to Multiple Charges 
+When several charges are present: 
+Use Superposition Principle. 
+
+Superposition Principle 
+Statement 
+The resultant electric field at a point equals the vector sum of electric fields produced by 
+individual charges. 
+
+Diagram 
++Q₁       
++Q₂ 
+●---------● 
+P 
+
+Formula 
+[ 
+\boxed{ 
+\vec E=\vec E_1+\vec E_2+\vec E_3+\cdots 
+} 
+] 
+
+Example 
+Two charges: 
+[ 
+Q_1=2\mu C 
+] 
+[ 
+Q_2=3\mu C 
+] 
+Both at same distance: 
+[ 
+r=1m 
+] 
+Find field. 
+
+Field due to (Q_1): 
+[ 
+E_1 = 9\times10^9 \frac{2\times10^{-6}}{1^2} = 18000 N/C 
+] 
+Field due to (Q_2): 
+[ 
+E_2 = 27000 N/C 
+] 
+Resultant: 
+[ 
+E=18000+27000 
+] 
+[ 
+\boxed{ 
+E=45000N/C 
+} 
+] 
+
+PYQ Connection 
+Everything below uses Electric Field: 
+Set 1 
+✅ Electric Dipole 
+✅ Gauss Law 
+✅ Potential 
+Set 2 
+✅ Gauss Theorem 
+✅ Capacitor 
+Set 3 
+✅ Dipole 
+✅ Polarization 
+
+Exam Notes (Very Important) 
+* Electric Field: Region around a charge where another charge experiences force. 
+* Electric Field Intensity: $E = F / q_0$
+* Field Due to Point Charge: $E = \frac{1}{4\pi\epsilon_0} \frac{Q}{r^2}$
+* Superposition Principle: $\vec{E} = \vec{E}_1 + \vec{E}_2 + \vec{E}_3$
+
+===========================================================================
+Chapter 2: Electric Flux and Gauss's Theorem (Most Important E&M Foundation)
+===========================================================================
+
+PYQ Frequency 
+✅ Set 1 → Gauss Law (5 Marks) 
+✅ Set 2 → Gauss Theorem (7 Marks) 
+✅ Set 3 → Electric Flux Numerical 
+
+This topic is the foundation of: 
+● Infinite Line Charge 
+● Infinite Plane Sheet 
+● Charged Sphere 
+● Dielectrics 
+● Maxwell's Equation 1 
+
+Part 1: Electric Flux 
+Why Do We Need Electric Flux? 
+Consider a fan. 
+If air passes normally through a window: 
+Wind → 
+┌─────────┐ 
+│ Window  │ 
+└─────────┘ 
+Maximum air crosses the window. 
+
+If the window is tilted: 
+Wind → 
+/ Window / 
+Less air crosses it. 
+
+Similarly, Electric Flux measures: 
+"How much electric field passes through a surface?" 
+
+Definition of Electric Flux 
+Electric Flux is the total electric field passing through a surface. 
+Symbol: 
+[ 
+\boxed{\phi_E} 
+] 
+
+Mathematical Definition 
+For a uniform field: 
+[ 
+\boxed{ 
+\phi_E=\vec E\cdot \vec A 
+} 
+] 
+Using dot product: 
+[ 
+\boxed{ 
+\phi_E=EA\cos\theta 
+} 
+] 
+where 
+● (E) = Electric Field 
+● (A) = Area 
+● (\theta) = Angle between electric field and area vector 
+
+Area Vector 
+Every surface has an area vector. 
+Direction: Always perpendicular (normal) to surface. 
+ 
+Diagram 
+          ↑ n 
+ 
+           │ 
+           │ 
+ 
+     ┌──────────┐ 
+     │ Surface  │ 
+     └──────────┘ 
+ 
+Case 1: Maximum Flux 
+Field normal to surface. 
+     ↑ E 
+      ↑ 
+ 
+     ┌─────┐ 
+     │     │ 
+     └─────┘ 
+ 
+      ↑ A 
+[ 
+\theta=0^\circ 
+] 
+[ 
+\cos0^\circ=1 
+] 
+Therefore, 
+[ 
+\boxed{ 
+\phi_E=EA 
+} 
+] 
+Maximum flux. 
+
+Case 2: Zero Flux 
+Field parallel to surface. 
+E → 
+──────────── Surface 
+Area vector is perpendicular to surface. 
+[ 
+\theta=90^\circ 
+] 
+[ 
+\cos90^\circ=0 
+] 
+Hence, 
+[ 
+\boxed{ 
+\phi_E=0 
+} 
+] 
+
+Unit of Electric Flux 
+[ 
+(N/C)(m^2) = \boxed{ N\cdot m^2/C } 
+] 
+
+Example (PYQ Type) 
+A square frame of side 10 cm is placed in a field of (20 V/m). 
+Angle between field and normal: 60°
+Find flux. 
+
+Given: 
+[ 
+E=20 V/m 
+] 
+[ 
+a=10cm=0.1m 
+] 
+[ 
+A=a^2 = 0.01m^2 
+] 
+Using 
+[ 
+\phi=EA\cos\theta = (20)(0.01)\cos60^\circ = (20)(0.01)(1/2) = 0.1 
+] 
+Answer 
+[ 
+\boxed{ 
+\phi=0.1 N\cdot m^2/C 
+} 
+] 
+(Asked in Set 2) 
+
+Part 2: Closed Surface 
+What is Closed Surface? 
+A surface enclosing volume. 
+Examples: Sphere, Cube. 
+
+Electric Flux Through Closed Surface 
+Notation: 
+[ 
+\boxed{ 
+\oint \vec E\cdot d\vec A 
+} 
+] 
+The circle means: Add flux over the complete closed surface. 
+
+Part 3: Gauss's Theorem 
+Statement 
+The total electric flux through any closed surface equals the enclosed charge divided by 
+permittivity of free space. 
+
+Mathematical Form 
+[ 
+\boxed{ 
+\oint \vec E\cdot d\vec A = \frac{Q}{\epsilon_0} 
+} 
+] 
+This is called Gauss's Law. 
+
+Meaning 
+Only charge inside matters. 
+Case 1: Charge Inside Surface 
+       _______ 
+      /    +Q   \ 
+      \_________/ 
+Flux exists: $\phi = Q / \epsilon_0$
+
+Case 2: Charge Outside Surface 
+      +Q 
+          _______ 
+        /         \ 
+        \_________/ 
+Net flux: $\boxed{0}$ because no charge is enclosed. 
+ 
+Proof of Gauss's Law (Very Important PYQ) 
+Step 1: Consider charge (Q) at center of sphere. 
+             ↑ E 
+         ↗         ↖ 
+       ↗     Q      ↖ 
+         ↘         ↙ 
+              ↓ E 
+       Spherical Surface 
+
+Step 2: Electric field due to charge: 
+[ 
+E = \frac{1}{4\pi\epsilon_0} \frac{Q}{r^2} 
+] 
+Step 3: Flux through area element: 
+[ 
+d\phi=E\cdot dA 
+] 
+Step 4: Integrate over whole sphere: 
+[ 
+\phi = \oint E\cdot dA = \frac{Q}{4\pi\epsilon_0 r^2} \oint dA 
+] 
+But $\oint dA=4\pi r^2$. Hence: 
+[ 
+\phi = \frac{Q}{4\pi\epsilon_0 r^2} (4\pi r^2) = \boxed{ \frac{Q}{\epsilon_0} } 
+] 
+Proved. 
+
+Differential Form (Asked in Set 1) 
+Using Divergence Theorem: 
+[ 
+\boxed{ 
+\nabla\cdot\vec E = \frac{\rho}{\epsilon_0} 
+} 
+] 
+This is Maxwell's First Equation. 
+
+===========================================================================
+Chapter 3: Applications of Gauss's Law (Highest Weightage Derivations)
+===========================================================================
+
+Directly Mentioned in Syllabus 
+✅ Infinite Line Charge 
+✅ Infinite Plane Sheet 
+✅ Spherical Charge Distribution 
+
+Why Use Gauss's Law? 
+Symmetry makes complex derivations extremely easy compared to Coulomb's Law. 
+
+1. Electric Field Due to Infinite Line Charge 
+Linear charge density: $\lambda = Q / L$
+
+Diagram 
+         Infinite Line Charge 
+                │ 
+                │ λ 
+                │ 
+          ╔══════════╗ 
+          ║          ║ 
+          ║Cylinder  ║ 
+          ║          ║ 
+          ╚══════════╝ 
+             Radius r 
+
+Step 1: Choose Gaussian Surface 
+Due to cylindrical symmetry, choose a cylindrical Gaussian surface. 
+Step 2: Calculate Flux 
+Flux through end caps = 0 (since $\theta = 90^\circ$). Only curved surface contributes: 
+[ 
+\phi = E(2\pi rL) 
+] 
+Step 3: Apply Gauss's Law 
+[ 
+E(2\pi rL) = \frac{Q}{\epsilon_0} = \frac{\lambda L}{\epsilon_0} 
+] 
+Cancel L: 
+[ 
+\boxed{ 
+E = \frac{\lambda}{2\pi\epsilon_0 r} 
+} 
+] 
+Observation: $E\propto\frac1r$
+
+2. Electric Field Due to Infinite Plane Sheet 
+Surface charge density: $\sigma = Q / A$
+
+Diagram 
+       Infinite Sheet 
+══════════════════════════ 
+           ↑ E 
+══════════════════════════ 
+           ↓ E 
+
+Step 1: Choose Gaussian Surface 
+Use a cylindrical pillbox perpendicular to the sheet. 
+Step 2: Flux Calculation 
+Flux through curved surface = 0. Flux through both flat caps = $EA + EA = 2EA$. 
+Step 3: Apply Gauss's Law 
+[ 
+2EA = \frac{Q}{\epsilon_0} = \frac{\sigma A}{\epsilon_0} 
+] 
+Cancel A: 
+[ 
+\boxed{ 
+E = \frac{\sigma}{2\epsilon_0} 
+} 
+] 
+Observation: Electric field does NOT depend on distance. 
+
+3. Electric Field Due to Uniformly Charged Sphere 
+Case 1: Outside Sphere ($r > R$) 
+Behaves like point charge at center: 
+[ 
+\boxed{ 
+E = \frac{1}{4\pi\epsilon_0} \frac{Q}{r^2} 
+} 
+] 
+Case 2: Inside Sphere ($r < R$) 
+Using volume charge density $\rho = Q / (\frac{4}{3}\pi R^3)$: 
+[ 
+Q_{enc} = Q \frac{r^3}{R^3} 
+] 
+Applying Gauss's Law: $E(4\pi r^2) = Q_{enc} / \epsilon_0$
+[ 
+\boxed{ 
+E = \frac{1}{4\pi\epsilon_0} \frac{Qr}{R^3} 
+} 
+] 
+Graph of E vs r 
+E 
+│   /\ 
+│  /  \ 
+│ /    \______ 
+│/ 
+└──────────── r 
+      R 
+Inside: $E \propto r$ | Outside: $E \propto 1/r^2$
+
+===========================================================================
+Chapter 4: Electric Potential and Potential Difference
+===========================================================================
+
+PYQ Connection 
+✅ Set 1 – Electric Dipole Potential (10 Marks) 
+✅ Set 2 – Potential at Centre of Square (5 Marks) 
+
+Why Do We Need Electric Potential? 
+Moving a charge in an electric field requires work, which is stored as electrostatic potential energy. 
+
+Electric Potential Difference 
+[ 
+\boxed{ 
+V_B-V_A=\frac{W}{q} 
+} 
+] 
+Unit: Volt ($1V = 1J/C$) 
+
+Electric Potential 
+Work done in bringing a unit positive charge from infinity to a point. 
+
+Potential Due to Point Charge 
+[ 
+V = -\int_{\infty}^{r} \vec E\cdot d\vec r 
+] 
+Substituting $E$: 
+[ 
+\boxed{ 
+V = \frac{1}{4\pi\epsilon_0} \frac{Q}{r} 
+} 
+] 
+Observation: $V \propto \frac{1}{r}$
+
+Potential Due to Several Charges (Scalar Sum) 
+[ 
+\boxed{ 
+V = V_1+V_2+V_3+\cdots = \frac{1}{4\pi\epsilon_0} \sum \frac{q_i}{r_i} 
+} 
+] 
+
+Relation Between Electric Field and Potential 
+[ 
+dW = qE\cdot dl \quad \implies \quad dV = -E\cdot dl 
+] 
+[ 
+\boxed{ 
+E = -\frac{dV}{dr} 
+} 
+] 
+Vector form: 
+[ 
+\boxed{ 
+\vec E = -\nabla V 
+} 
+] 
+Physical Meaning: Electric field points in the direction of steepest decrease of potential. 
+
+Equipotential Surface 
+A surface where potential is same everywhere. 
+Properties: 
+1. Work done along the surface is zero ($W = 0$). 
+2. Electric field is always perpendicular to the surface. 
+
+Potential Energy of Two Charges 
+[ 
+\boxed{ 
+U = \frac{1}{4\pi\epsilon_0} \frac{q_1 q_2}{r} 
+} 
+] 
+
+===========================================================================
+Chapter 5: Electric Dipole (Most Important Long Question)
+===========================================================================
+
+PYQ Frequency 
+✅ Set 1 Question 2(a) – 10 Marks 
+✅ Set 3 Question 2(a) – 10 Marks 
+
+What is an Electric Dipole? 
+Two equal and opposite charges separated by a small distance. 
+
+Dipole Moment 
+Product of charge and separation. 
+      -q ●──────● +q 
+            2a 
+          → p 
+Direction: From negative to positive charge. 
+[ 
+\boxed{ 
+\vec p = q(2a) 
+} 
+] 
+Unit: $C\cdot m$
+
+Electric Potential Due to Dipole (General Point $P(r,\theta)$) 
+Binomial approximation for $r \gg a$: 
+$r_+ = r - a\cos\theta$ and $r_- = r + a\cos\theta$
+[ 
+V = \frac{q}{4\pi\epsilon_0} \left( \frac{1}{r_+} - \frac{1}{r_-} \right) 
+] 
+[ 
+\boxed{ 
+V = \frac{1}{4\pi\epsilon_0} \frac{p\cos\theta}{r^2} 
+} 
+] 
+Special Cases: 
+* Axial ($\theta = 0^\circ$): $V_{\text{axial}} = \frac{1}{4\pi\epsilon_0} \frac{p}{r^2}$
+* Equatorial ($\theta = 90^\circ$): $V_{\text{equatorial}} = 0$
+
+Electric Field Due to Dipole (using $\vec{E} = -\nabla V$) 
+Radial field: $E_r = \frac{1}{4\pi\epsilon_0} \frac{2p\cos\theta}{r^3}$
+Tangential field: $E_\theta = \frac{1}{4\pi\epsilon_0} \frac{p\sin\theta}{r^3}$
+Resultant: 
+[ 
+\boxed{ 
+E = \frac{1}{4\pi\epsilon_0} \frac{p}{r^3}\sqrt{1+3\cos^2\theta} 
+} 
+] 
+Special Cases: 
+* Axial field: $E_{\text{axial}} = \frac{1}{4\pi\epsilon_0} \frac{2p}{r^3}$
+* Equatorial field: $E_{\text{equatorial}} = \frac{1}{4\pi\epsilon_0} \frac{p}{r^3}$
+
+Torque on Dipole in Uniform Field 
+[ 
+\boxed{ 
+\vec\tau = \vec p \times \vec E 
+} 
+] 
+Magnitude: $\tau = pE\sin\theta$
+
+Potential Energy of Dipole 
+[ 
+\boxed{ 
+U = -\vec p \cdot \vec E = -pE\cos\theta 
+} 
+] 
+* Stable equilibrium: $\theta = 0^\circ$
+* Unstable equilibrium: $\theta = 180^\circ$
+
+===========================================================================
+Chapter 6: Dielectrics and Polarization
+===========================================================================
+
+What is a Dielectric? 
+An insulating material that polarizes under an external electric field. 
+
+Polarization Vector (P) 
+Dipole moment per unit volume. 
+[ 
+\boxed{ 
+P = \frac{p}{V} 
+} 
+] 
+Unit: $C/m^2$
+
+Relation Between Polarization and Surface Charge Density 
+Induced surface charge is called bound charge ($\sigma_p$). 
+[ 
+\boxed{ 
+\sigma_p = \vec P \cdot \hat n = P 
+} 
+] 
+
+Electric Susceptibility ($\chi_e$) 
+Measures ease of polarization: 
+[ 
+\boxed{ 
+P = \epsilon_0 \chi_e E 
+} 
+] 
+
+Dielectric Constant (K) 
+[ 
+\boxed{ 
+K = \frac{\epsilon}{\epsilon_0} = 1 + \chi_e 
+} 
+] 
+
+Electric Displacement Vector (D) 
+Combines effects of free and bound charges: 
+[ 
+\boxed{ 
+D = \epsilon_0 E + P = \epsilon E 
+} 
+] 
+
+Gauss's Law in Dielectrics 
+Only free charges contribute to D-flux: 
+[ 
+\boxed{ 
+\oint \vec D \cdot d\vec A = Q_{\text{free}} 
+} 
+] 
+Differential Form: $\nabla \cdot \vec D = \rho_{\text{free}}$
+
+Capacitor with Dielectric (K) 
+Capacitance always increases: $C' = KC_0$. 
+* Case 1: Battery Connected (Voltage V is constant) 
+  * $V' = V_0$
+  * $C' = KC_0$
+  * $Q' = KQ_0$
+  * $E' = E_0$
+  * $U' = KU_0$ (increases)
+* Case 2: Battery Disconnected / Isolated (Charge Q is constant) 
+  * $Q' = Q_0$
+  * $C' = KC_0$
+  * $V' = V_0 / K$ (decreases)
+  * $E' = E_0 / K$ (decreases)
+  * $U' = U_0 / K$ (decreases)
+
+===========================================================================
+Chapter 7: Magnetic Field and Magnetic Force
+===========================================================================
+
+What is Magnetic Field (B)? 
+Region around a moving charge or magnet where magnetic forces are felt. 
+Unit: Tesla (T) or Gauss ($1T = 10^4 G$) 
+
+Lorentz Force 
+Total force on a charge moving through electric and magnetic fields: 
+[ 
+\boxed{ 
+\vec F = q(\vec E + \vec v \times \vec B) 
+} 
+] 
+Only Magnetic field: $F = qvB\sin\theta$
+* Parallel motion ($\theta = 0^\circ$): $F = 0$ (Straight path) 
+* Perpendicular motion ($\theta = 90^\circ$): $F = qvB$ (Circular path) 
+
+Radius of Circular Path (Centripetal = Magnetic force) 
+[ 
+\frac{mv^2}{r} = qvB \quad \implies \quad \boxed{ r = \frac{mv}{qB} } 
+] 
+
+Time Period of Revolution 
+[ 
+\boxed{ 
+T = \frac{2\pi m}{qB} 
+} 
+] 
+Observation: Time period is independent of speed and radius! 
+
+Force on Current-Carrying Conductor 
+[ 
+\boxed{ 
+\vec F = I(\vec L \times \vec B) 
+} 
+] 
+Magnitude: $F = BIL\sin\theta$
+
+===========================================================================
+Chapter 8: Biot-Savart Law
+===========================================================================
+
+Gives magnetic field due to a small current element $Idl$. 
+
+Diagram 
+                 P 
+                  ● 
+                 /| 
+                / | 
+               /  | r 
+              /θ  | 
+             /    | 
+          ●──────→ dl 
+               I 
+
+Formula 
+[ 
+\boxed{ 
+dB = \frac{\mu_0}{4\pi} \frac{Idl\sin\theta}{r^2} 
+} 
+] 
+Vector form: 
+[ 
+\boxed{ 
+d\vec B = \frac{\mu_0}{4\pi} \frac{I(d\vec l \times \hat r)}{r^2} 
+} 
+] 
+where $\mu_0 = 4\pi \times 10^{-7} T\cdot m/A$ (Permeability of free space). 
+
+Application: B due to Infinite Straight Wire 
+Integrating Biot-Savart from $\theta = -90^\circ$ to $+90^\circ$: 
+[ 
+\boxed{ 
+B = \frac{\mu_0 I}{2\pi r} 
+} 
+] 
+Observation: $B \propto \frac{1}{r}$
+
+===========================================================================
+Chapter 9: Magnetic Field on the Axis of a Circular Coil
+===========================================================================
+
+PYQ Frequency: ⭐⭐⭐⭐⭐ Direct 10-Mark Derivation 
+
+Problem: Find magnetic field at axial point P. 
+                    P 
+                     ● 
+                    /| 
+                   / | 
+                  /  | 
+                 /   | r = √(R²+x²) 
+                /    | 
+               ●------| 
+              R   O   x 
+
+Symmetry Argument: 
+Perpendicular components ($dB\sin\phi$) cancel due to diametrically opposite elements. 
+Axial components ($dB\cos\phi$) add. 
+[ 
+B = \oint dB\cos\phi = \oint \left(\frac{\mu_0}{4\pi} \frac{Idl}{r^2}\right) \left(\frac{R}{r}\right) 
+] 
+[ 
+B = \frac{\mu_0 I R}{4\pi r^3} \oint dl = \frac{\mu_0 I R}{4\pi r^3} (2\pi R) 
+] 
+Final Result (N turns): 
+[ 
+\boxed{ 
+B = \frac{\mu_0 N I R^2}{2(R^2+x^2)^{3/2}} 
+} 
+] 
+At the Centre ($x = 0$): 
+[ 
+\boxed{ 
+B = \frac{\mu_0 N I}{2R} 
+} 
+] 
+
+===========================================================================
+Chapter 10: Ampere's Circuital Law
+===========================================================================
+
+Ampere's Circuital Law 
+The line integral of magnetic field around any closed path equals $\mu_0$ times the total current enclosed. 
+[ 
+\boxed{ 
+\oint \vec B \cdot d\vec l = \mu_0 I_{\text{enclosed}} 
+} 
+] 
+
+Application 1: Infinite Straight Wire 
+Circular Amperian loop of radius r: 
+[ 
+B(2\pi r) = \mu_0 I \quad \implies \quad \boxed{ B = \frac{\mu_0 I}{2\pi r} } 
+] 
+
+Application 2: Magnetic Field Inside a Long Solenoid 
+Rectangular Amperian loop where only the inside parallel section contributes: 
+[ 
+Bl = \mu_0 N_{\text{enc}} I = \mu_0 (nl) I 
+] 
+[ 
+\boxed{ 
+B = \mu_0 n I 
+} 
+] 
+where $n = N / L$ is the turns per unit length. 
+
+Application 3: Magnetic Field Inside Toroid 
+A toroid is a hollow circular ring on which a large number of insulated turns of wire are closely wound. It is essentially a solenoid bent into a closed circular shape.
+
+Diagram 
+           Cross-Section of Toroid
+                . - ~ ~ ~ - .
+            . '    \  │  /    ' .
+          . '   ←   ●───●   →   ' .
+         . '        │ c │        ' .
+         │   ↑   ●───┼───●   ↑   │  r (mean radius)
+         . .        │   │        . .
+          . '   ←   ●───●   →   ' .
+            . '    /  │  \    ' .
+                ' - _ _ _ - '
+
+Derivation 
+Step 1: Choose a circular Amperian loop of radius $r$ inside the core of the toroid. By symmetry, the magnetic field $\vec{B}$ is constant in magnitude and tangent to the circular loop at all points.
+Step 2: Calculate the line integral of $\vec{B}$:
+[ 
+\oint \vec B \cdot d\vec l = B \oint dl = B(2\pi r) 
+] 
+Step 3: Determine the enclosed current. If the toroid has $N$ total turns and carries current $I$, the loop encloses all $N$ turns:
+[ 
+I_{\text{enc}} = NI 
+] 
+Step 4: Apply Ampere's Law:
+[ 
+B(2\pi r) = \mu_0 NI 
+] 
+Therefore:
+[ 
+\boxed{ 
+B = \frac{\mu_0 NI}{2\pi r} 
+} 
+] 
+Let $n = \frac{N}{2\pi r}$ be the number of turns per unit length. Then:
+[ 
+\boxed{ 
+B = \mu_0 n I 
+} 
+] 
+Observation 
+* The magnetic field inside the core of a toroid is uniform.
+* The magnetic field in the open space interior to ($r < a$) or exterior to ($r > b$) the toroid is $\boxed{0}$ because the net enclosed current is zero.
+
+===========================================================================
+Chapter 11: Magnetic Materials (Susceptibility & Permeability)
+===========================================================================
+
+Syllabus Weightage: ⭐⭐⭐⭐ Highly repetitive short notes questions.
+
+Why Do We Need Magnetization Vector (M)?
+When a material is placed in an external magnetic field, its atomic dipoles align, creating an induced magnetic dipole moment. Magnetization measures this alignment.
+
+Definition of Magnetization (M)
+The magnetic dipole moment per unit volume of the material.
+[ 
+\boxed{ 
+\vec M = \frac{\vec m_{\text{net}}}{V} 
+} 
+] 
+Unit: Ampere per meter ($\boxed{ A/m }$)
+
+Magnetic Intensity (H)
+The external magnetic field applied, independent of the medium's magnetic properties.
+[ 
+\boxed{ 
+\vec H = \frac{\vec B_0}{\mu_0} 
+} 
+] 
+Unit: Ampere per meter ($\boxed{ A/m }$)
+
+Total Magnetic Field (B) in a Medium
+The total magnetic field inside a material is the sum of the external field ($\mu_0 H$) and the field due to magnetization ($\mu_0 M$):
+[ 
+\boxed{ 
+\vec B = \mu_0(\vec H + \vec M) 
+} 
+] 
+
+Magnetic Susceptibility ($\chi_m$)
+Measures how easily a material magnetizes in response to an applied field:
+[ 
+\boxed{ 
+\vec M = \chi_m \vec H 
+} 
+] 
+$\chi_m$ is a dimensionless constant.
+
+Magnetic Permeability ($\mu$)
+The ratio of total magnetic field $B$ to magnetic intensity $H$: $\mu = B / H$.
+Relative Permeability ($\mu_r$) is:
+[ 
+\boxed{ 
+\mu_r = \frac{\mu}{\mu_0} 
+} 
+] 
+
+Derivation: Relation Between $\mu_r$ and $\chi_m$
+We know:
+[ 
+B = \mu_0(H + M) 
+] 
+Substitute $M = \chi_m H$:
+[ 
+B = \mu_0(H + \chi_m H) = \mu_0 H (1 + \chi_m) 
+] 
+We also know $B = \mu H$. Therefore:
+[ 
+\mu H = \mu_0 H (1 + \chi_m) 
+] 
+Cancel $H$:
+[ 
+\mu = \mu_0 (1 + \chi_m) \quad \implies \quad \boxed{ \mu_r = 1 + \chi_m } 
+} 
+] 
+Proved. (Asked repeatedly in Set 2)
+
+Classification of Magnetic Materials
+
+1. Diamagnetic Materials
+* Magnetize weakly in the opposite direction of the external field.
+* Magnetic Susceptibility: $\chi_m$ is negative and small ($\chi_m < 0$).
+* Relative Permeability: $\mu_r < 1$.
+* Examples: Copper (Cu), Bismuth (Bi), Water ($H_2O$), Silicon (Si).
+
+2. Paramagnetic Materials
+* Magnetize weakly in the direction of the external field.
+* Magnetic Susceptibility: $\chi_m$ is positive and small ($\chi_m > 0$).
+* Relative Permeability: $\mu_r > 1$.
+* Examples: Aluminium (Al), Sodium (Na), Platinum (Pt), Oxygen ($O_2$).
+
+3. Ferromagnetic Materials
+* Magnetize strongly in the direction of the external field.
+* Magnetic Susceptibility: $\chi_m$ is positive and extremely large ($\chi_m \gg 1$).
+* Relative Permeability: $\mu_r \gg 1$.
+* Examples: Iron (Fe), Cobalt (Co), Nickel (Ni).
+
+Comparison Table (Highly Visual Summary)
+┌──────────────────────┬──────────────────────┬──────────────────────┬──────────────────────┐
+│ Property             │ Diamagnetic          │ Paramagnetic         │ Ferromagnetic        │
+├──────────────────────┼──────────────────────┼──────────────────────┼──────────────────────┤
+│ Susceptibility (χ)   │ Negative (-10⁻⁵)     │ Small Positive (10⁻⁵)│ Very Large (> 10³)   │
+│ Permeability (μ_r)   │ μ_r < 1              │ μ_r > 1              │ μ_r ≫ 1              │
+│ In External Field    │ Weakly repelled      │ Weakly attracted     │ Strongly attracted   │
+│ Temperature Effect   │ Independent of T     │ χ ∝ 1/T (Curie Law)  │ Decreases with T     │
+└──────────────────────┴──────────────────────┴──────────────────────┴──────────────────────┘
+
+===========================================================================
+Chapter 12: Electromagnetic Induction (EMI)
+===========================================================================
+
+PYQ Frequency 
+✅ Set 2 → Self-Inductance of a Solenoid (5 Marks) 
+✅ Set 3 → Faraday & Lenz's Law Conceptual (3 Marks) 
+
+What is Electromagnetic Induction?
+The phenomenon of generating an electromotive force (emf) and current in a circuit by changing the magnetic flux linked with it.
+
+Faraday's Laws of EMI
+
+Faraday's First Law
+Whenever the magnetic flux linked with a circuit changes, an emf is induced in it. This induced emf lasts only as long as the change in magnetic flux continues.
+
+Faraday's Second Law
+The magnitude of the induced emf is directly proportional to the rate of change of magnetic flux linked with the circuit.
+[ 
+\boxed{ 
+e = -N \frac{d\phi_B}{dt} 
+} 
+] 
+where $N$ is the number of turns. The negative sign represents the direction of induced emf.
+
+Lenz's Law & Conservation of Energy
+Lenz's Law Statement: The direction of the induced current is always such that it opposes the change in magnetic flux that produces it.
+
+Why is Lenz's Law a consequence of Conservation of Energy?
+If we move the North pole of a magnet toward a coil:
+* The coil develops a North pole on the facing side to repel the incoming magnet.
+* We must do mechanical work against this repulsive force to push the magnet closer.
+* This mechanical work is converted into the electrical energy of the induced current.
+* If the opposite occurred (attraction), the magnet would accelerate indefinitely without any external work, violating the Law of Conservation of Energy! ❌
+
+Motional emf
+Consider a straight conductor of length $l$ moving with velocity $v$ perpendicular to a uniform magnetic field $B$ pointing into the page.
+
+Diagram 
+        ×   ×   ×   ×   ×   ×   ×   ×
+        × ┌──────────┐  v →     ×   ×
+        × │Conductor │ ───►     ×   ×  B (into page)
+        × │Length l  │          ×   ×
+        × └──────────┘          ×   ×
+        ×   ×   ×   ×   ×   ×   ×   ×
+
+Derivation
+Magnetic flux enclosed by the moving circuit of width $x$:
+[ 
+\phi_B = Blx 
+] 
+According to Faraday's Law:
+[ 
+e = -\frac{d\phi_B}{dt} = -\frac{d}{dt}(Blx) = -Bl\left(\frac{dx}{dt}\right) 
+] 
+Since the width $x$ is decreasing, $\frac{dx}{dt} = -v$. Substituting:
+[ 
+\boxed{ 
+e = Blv 
+} 
+] 
+Proved.
+
+Self-Induction & Mutual Induction
+
+Self-Induction
+The induction of an opposing emf in a single coil when the current passing through it changes.
+Flux linkage is proportional to current: $N\phi_B = LI$.
+Self-Induced emf:
+[ 
+\boxed{ 
+e = -L \frac{dI}{dt} 
+} 
+] 
+where $L$ is the Self-Inductance (Unit: Henry, H).
+
+Derivation: Self-Inductance of a Long Solenoid (DU Set 2 Repeated)
+Consider a long solenoid of length $l$, area $A$, and total turns $N$.
+1. Magnetic field inside: $B = \mu_0 \frac{N}{l} I$
+2. Flux through one turn: $\phi = BA = \mu_0 \frac{N}{l} I A$
+3. Total flux linkage: $N\phi = \mu_0 \frac{N^2 A}{l} I$
+4. Since $N\phi = LI$:
+[ 
+\boxed{ 
+L = \frac{\mu_0 N^2 A}{l} 
+} 
+] 
+Proved.
+
+Mutual Induction
+The induction of an emf in a secondary coil when the current flowing in a primary coil changes.
+Flux linkage in secondary: $N_2 \phi_2 = MI_1$.
+Mutual Induced emf:
+[ 
+\boxed{ 
+e_2 = -M \frac{dI_1}{dt} 
+} 
+] 
+where $M$ is the Mutual Inductance.
+
+For two coaxial solenoids, Mutual Inductance is:
+[ 
+\boxed{ 
+M = \frac{\mu_0 N_1 N_2 A}{l} 
+} 
+] 
+
+===========================================================================
+Chapter 13: Maxwell's Equations and Displacement Current
+===========================================================================
+
+PYQ Frequency: ⭐⭐⭐⭐⭐ Direct 10-Mark Question in almost all sets.
+
+Continuity Equation (Conservation of Charge)
+Statement: The net rate of charge flowing out of a closed volume must equal the rate of decrease of charge within that volume.
+1. Total charge inside volume $V$: $Q = \int_V \rho dV$
+2. Outward current flowing through closed surface $S$: $I = \oint_S \vec{J} \cdot d\vec{A}$
+3. By charge conservation: $I = -\frac{dQ}{dt}$
+[ 
+\oint_S \vec{J} \cdot d\vec{A} = -\frac{d}{dt}\int_V \rho dV = \int_V -\frac{\partial\rho}{\partial t} dV 
+] 
+4. Applying Gauss's Divergence Theorem to the left side:
+[ 
+\int_V (\nabla\cdot\vec{J}) dV = \int_V -\frac{\partial\rho}{\partial t} dV 
+] 
+Equating the integrands:
+[ 
+\boxed{ 
+\nabla\cdot\vec{J} + \frac{\partial\rho}{\partial t} = 0 
+} 
+] 
+This is the Continuity Equation. (Set 2 direct derivation)
+
+Displacement Current
+Why did Maxwell modify Ampere's Law?
+Consider a parallel plate capacitor being charged by a current $I$.
+* Apply Ampere's Law to a flat circular loop enclosing the wire: $\oint \vec{B}\cdot d\vec{l} = \mu_0 I$.
+* Apply Ampere's Law to a balloon-shaped surface passing between the plates: $\oint \vec{B}\cdot d\vec{l} = 0$ (no wire passes through this surface).
+* This is a logical contradiction! Maxwell resolved this by asserting that the changing electric field between the plates induces a magnetic field, acting like a current.
+
+Definition of Displacement Current ($I_d$)
+[ 
+\boxed{ 
+I_d = \epsilon_0 \frac{d\phi_E}{dt} 
+} 
+] 
+where $\phi_E = EA = \frac{Q}{\epsilon_0 A} A = \frac{Q}{\epsilon_0}$ is the electric flux between the plates.
+
+Modified Ampere's Law (Ampere-Maxwell Law)
+[ 
+\boxed{ 
+\oint \vec B \cdot d\vec l = \mu_0(I + I_d) = \mu_0 I + \mu_0 \epsilon_0 \frac{d\phi_E}{dt} 
+} 
+] 
+Differential Form:
+[ 
+\boxed{ 
+\nabla \times \vec B = \mu_0 \vec J + \mu_0 \epsilon_0 \frac{\partial \vec E}{\partial t} 
+} 
+] 
+
+Maxwell's Four Equations Summary (The Crown Jewel of E&M)
+┌──────────────────────┬──────────────────────────────────────────┬──────────────────────────────────────────┐
+│ Name of Equation     │ Differential Form                        │ Integral Form                            │
+├──────────────────────┼──────────────────────────────────────────┼──────────────────────────────────────────┤
+│ Gauss's Law (Elec)   │ ∇·E = ρ/ε₀                               │ ∮ E·dA = Q_enc/ε₀                        │
+│ Gauss's Law (Mag)    │ ∇·B = 0                                  │ ∮ B·dA = 0                               │
+│ Faraday's Law        │ ∇×E = -∂B/∂t                             │ ∮ E·dl = -d𝜙_B/dt                        │
+│ Ampere-Maxwell Law   │ ∇×B = μ₀J + μ₀ε₀∂E/∂t                    │ ∮ B·dl = μ₀I + μ₀ε₀d𝜙_E/dt               │
+└──────────────────────┴──────────────────────────────────────────┴──────────────────────────────────────────┘
+
+Physical Significance of Maxwell's Equations
+1. **Gauss's Law (Elec):** Electric charges are the sources of electric fields. Isolated electric charges exist.
+2. **Gauss's Law (Mag):** Magnetic monopoles do not exist. Magnetic field lines always form closed loops.
+3. **Faraday's Law:** A changing magnetic field produces a curl-like (non-conservative) electric field.
+4. **Ampere-Maxwell Law:** Magnetic fields are produced by conduction currents and changing electric fields.
+
+===========================================================================
+Chapter 14: Network Theorems (DU Set 1, 2 & 3 Core)
+===========================================================================
+
+PYQ Connection 
+✅ Set 1 → Thevenin's Proof & Series circuit (10 Marks) 
+✅ Set 2 → Maximum Power Transfer Theorem Proof (7 Marks) 
+✅ Set 3 → Norton's Theorem Numerical (5 Marks) 
+
+Ohm's Law & Power
+[ 
+V = IR \quad \text{and} \quad P = VI = I^2 R = \frac{V^2}{R} 
+] 
+
+Kirchhoff's Laws
+
+1. Kirchhoff's Current Law (KCL)
+Statement: The sum of currents entering a junction must equal the sum of currents leaving the junction.
+[ 
+\boxed{ 
+\sum I = 0 
+} 
+] 
+Conservation Basis: Based on the **Law of Conservation of Charge**.
+
+2. Kirchhoff's Voltage Law (KVL)
+Statement: The algebraic sum of all potential differences and emfs around any closed loop is zero.
+[ 
+\boxed{ 
+\sum V = 0 
+} 
+] 
+Conservation Basis: Based on the **Law of Conservation of Energy**.
+
+Thevenin's Theorem
+Statement: Any active linear bilateral two-terminal network containing voltage sources and resistances can be replaced by a single equivalent voltage source $V_{\text{th}}$ in series with a single resistance $R_{\text{th}}$.
+
+Diagrams 
+        Original Active Network                Thevenin Equivalent
+          ┌──────────────┐                     Series Circuit
+          │ Linear       │ A                     R_th
+      o───│ Active       │───o A             o───/\/\/\───o A
+          │ Network      │                   │
+      o───│              │───o B           (V_th)
+          └──────────────┘                   │            
+                                             o────────────o B
+
+How to Find:
+1. **$V_{\text{th}}$:** The open-circuit voltage across terminals A and B after removing the load resistor $R_L$.
+2. **$R_{\text{th}}$:** The equivalent resistance looking back into terminals A and B with all independent voltage sources shorted and current sources opened.
+Load Current:
+[ 
+\boxed{ 
+I_L = \frac{V_{\text{th}}}{R_{\text{th}} + R_L} 
+} 
+] 
+
+Norton's Theorem
+Statement: Any active linear bilateral two-terminal network can be replaced by an equivalent circuit containing a single constant current source $I_N$ in parallel with a single resistance $R_N$.
+
+Diagram 
+        Norton Equivalent Parallel Circuit
+                  A
+         o────────┬────────o A
+         │        │
+       ( I_N)    [ R_N]  (Parallel)
+         │        │
+         o────────┴────────o B
+                  B
+
+Conversion between Thevenin and Norton:
+[ 
+\boxed{ 
+R_N = R_{\text{th}} \quad \text{and} \quad I_N = \frac{V_{\text{th}}}{R_{\text{th}}} 
+} 
+] 
+
+Maximum Power Transfer Theorem
+Statement: Maximum power is transferred from a source network to a load resistor $R_L$ when the load resistance equals the internal series resistance $R_{th}$ of the source.
+
+Derivation (DU Set 2 Repeated)
+Power delivered to the load:
+[ 
+P = I_L^2 R_L = \left(\frac{V_{\text{th}}}{R_{\text{th}} + R_L}\right)^2 R_L = \frac{V_{\text{th}}^2 R_L}{(R_{\text{th}} + R_L)^2} 
+] 
+To find the value of $R_L$ that maximizes $P$, differentiate $P$ with respect to $R_L$ and set to $0$:
+[ 
+\frac{dP}{dR_L} = V_{\text{th}}^2 \left[ \frac{(R_{\text{th}} + R_L)^2(1) - R_L(2)(R_{\text{th}} + R_L)}{(R_{\text{th}} + R_L)^4} \right] = 0 
+] 
+Set numerator to 0:
+[ 
+(R_{\text{th}} + R_L)^2 - 2R_L(R_{\text{th}} + R_L) = 0 
+] 
+Divide by $(R_{\text{th}} + R_L)$:
+[ 
+R_{\text{th}} + R_L - 2R_L = 0 \quad \implies \quad \boxed{ R_L = R_{\text{th}} } 
+] 
+Proved.
+
+Maximum Power Output Formula
+Substituting $R_L = R_{\text{th}}$ back into the power equation:
+[ 
+P_{\text{max}} = \frac{V_{\text{th}}^2 R_{\text{th}}}{(R_{\text{th}} + R_{\text{th}})^2} = \frac{V_{\text{th}}^2 R_{\text{th}}}{4 R_{\text{th}}^2} = \boxed{ \frac{V_{\text{th}}^2}{4 R_{\text{th}}} } 
+] 
+
+Efficiency at Maximum Power Transfer
+[ 
+\eta = \frac{P_{\text{load}}}{P_{\text{total}}} = \frac{I^2 R_L}{I^2(R_{\text{th}} + R_L)} = \frac{R_{\text{th}}}{2 R_{\text{th}}} = \boxed{ 50\% } 
+] 
+Observation: At maximum power transfer, $50\%$ of the energy is lost as heat inside the source network!
+
+===========================================================================
+Congratulations! You have completed the entire E&M Course notes.
+Good luck with your examinations! 🚀
+===========================================================================
