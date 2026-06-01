@@ -2208,3 +2208,14 @@ function drawEMSolenoid(ctx, originX, originY, scaleFactor) {
     ctx.roundRect(startX, topY - 10, solWidth, solHeight + 20, 4);
     ctx.stroke();
 }
+
+
+// Mobile Sidebar Toggle
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const sidebar = document.querySelector('.sidebar');
+
+if (mobileMenuBtn && sidebar) {
+    mobileMenuBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+    });
+}
