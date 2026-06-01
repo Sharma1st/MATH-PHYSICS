@@ -78,7 +78,8 @@ body {
     font-family: var(--font-body);
     background-color: var(--bg-app);
     color: var(--text-primary);
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     transition: background-color var(--transition-speed), color var(--transition-speed);
@@ -823,5 +824,41 @@ h1, h2, h3, h4, h5, h6 {
     .visualizer-body {
         height: 480px;
         overflow-y: auto;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .visualizer-workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .content-header {
+        padding: 12px;
+    }
+
+    #current-chapter-title {
+        font-size: 18px;
+    }
+
+    .content-body {
+        padding: 15px;
+    }
+
+    .chapter-section h2 {
+        font-size: 22px;
+    }
+
+    .chapter-section h3 {
+        font-size: 18px;
+    }
+
+    .question-input-area input {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .btn {
+        width: 100%;
     }
 }
