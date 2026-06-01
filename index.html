@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSC-2: Linear Algebra | Hinglish Digital Textbook & Visualizer</title>
+    <meta name="description" content="An interactive, beautifully typeset digital textbook for college Linear Algebra in Hinglish. Features interactive math visualizers and step-by-step solved questions.">
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- KaTeX for beautiful math equations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo" id="app-logo">
+                    <span class="logo-icon"><i class="fa-solid fa-square-root-variable"></i></span>
+                    <span class="logo-text">Linear<span>Algebra</span></span>
+                </div>
+                <div class="badge" id="app-badge">DSC-2</div>
+            </div>
+            
+            <!-- Modern Course Selector -->
+            <div class="course-selector-container">
+                <label for="course-select"><i class="fa-solid fa-graduation-cap"></i> SELECT COURSE</label>
+                <select id="course-select" class="course-select">
+                    <option value="linear-algebra" selected>DSC-2: Linear Algebra</option>
+                    <option value="electricity-magnetism">Electricity & Magnetism</option>
+                </select>
+            </div>
+            
+            <nav class="sidebar-menu" id="sidebar-menu-dynamic">
+                <!-- Sidebar menu items will be loaded dynamically via app.js -->
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button id="theme-toggle" class="btn btn-secondary">
+                    <i class="fa-solid fa-sun"></i> <span>Light Mode</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Header bar -->
+            <header class="content-header">
+                <div class="header-left">
+                    <button id="mobile-menu-btn" class="btn btn-icon"><i class="fa-solid fa-bars"></i></button>
+                    <h2 id="current-chapter-title">Euclidean Space $\mathbb{R}^n$ and Vectors</h2>
+                </div>
+                <div class="header-right">
+                    <a href="dsc2_linear_algebra_hinglish.pdf" download class="btn btn-primary">
+                        <i class="fa-solid fa-file-pdf"></i> Download LaTeX PDF
+                    </a>
+                </div>
+            </header>
+
+            <!-- Active Content Container -->
+            <article class="content-body" id="textbook-content">
+                <!-- Content gets dynamically loaded or toggled via app.js -->
+            </article>
+
+            <!-- Floating Math Visualizer Drawer -->
+            <div class="visualizer-drawer collapsed" id="visualizer-panel">
+                <button class="visualizer-toggle" id="visualizer-toggle-btn">
+                    <i class="fa-solid fa-chart-line"></i> <span>Interactive Vector Visualizer (Click to Open)</span>
+                </button>
+                <div class="visualizer-body">
+                    <div class="visualizer-workspace">
+                        <div class="canvas-container">
+                            <canvas id="vector-canvas"></canvas>
+                        </div>
+                        <div class="visualizer-controls">
+                            <h3>Visualizer Configuration</h3>
+                            
+                            <div class="mode-select">
+                                <label for="visualizer-mode">Select Concept Mode:</label>
+                                <select id="visualizer-mode">
+                                    <option value="addition">Vector Addition (u + v)</option>
+                                    <option value="combination">Linear Combination (c₁u + c₂v)</option>
+                                    <option value="transformation">Linear Transformation (T(x))</option>
+                                    <option value="eigenvalue">Eigenvectors & Eigenvalues (Ax = λx)</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Dynamic controls depending on mode -->
+                            <div class="control-group" id="controls-vectors">
+                                <h4>Adjust Vector u (Purple)</h4>
+                                <div class="slider-item">
+                                    <span>uₓ: <span id="val-ux">3</span></span>
+                                    <input type="range" id="slider-ux" min="-5" max="5" step="0.5" value="3">
+                                </div>
+                                <div class="slider-item">
+                                    <span>uᵧ: <span id="val-uy">2</span></span>
+                                    <input type="range" id="slider-uy" min="-5" max="5" step="0.5" value="2">
+                                </div>
+
+                                <h4>Adjust Vector v (Green)</h4>
+                                <div class="slider-item">
+                                    <span>vₓ: <span id="val-vx">1</span></span>
+                                    <input type="range" id="slider-vx" min="-5" max="5" step="0.5" value="1">
+                                </div>
+                                <div class="slider-item">
+                                    <span>vᵧ: <span id="val-vy">-3</span></span>
+                                    <input type="range" id="slider-vy" min="-5" max="5" step="0.5" value="-3">
+                                </div>
+                            </div>
+                            
+                            <div class="control-group hidden" id="controls-scalars">
+                                <h4>Adjust Scalars</h4>
+                                <div class="slider-item">
+                                    <span>c₁: <span id="val-c1">1.5</span></span>
+                                    <input type="range" id="slider-c1" min="-3" max="3" step="0.1" value="1.5">
+                                </div>
+                                <div class="slider-item">
+                                    <span>c₂: <span id="val-c2">-0.8</span></span>
+                                    <input type="range" id="slider-c2" min="-3" max="3" step="0.1" value="-0.8">
+                                </div>
+                            </div>
+
+                            <div class="control-group hidden" id="controls-matrix">
+                                <h4>Transformation Matrix T = [a, b; c, d]</h4>
+                                <div class="slider-item">
+                                    <span>a (Scale X): <span id="val-ma">1.5</span></span>
+                                    <input type="range" id="slider-ma" min="-2" max="2" step="0.1" value="1.5">
+                                </div>
+                                <div class="slider-item">
+                                    <span>b (Shear X): <span id="val-mb">0.5</span></span>
+                                    <input type="range" id="slider-mb" min="-2" max="2" step="0.1" value="0.5">
+                                </div>
+                                <div class="slider-item">
+                                    <span>c (Shear Y): <span id="val-mc">0.0</span></span>
+                                    <input type="range" id="slider-mc" min="-2" max="2" step="0.1" value="0">
+                                </div>
+                                <div class="slider-item">
+                                    <span>d (Scale Y): <span id="val-md">1.0</span></span>
+                                    <input type="range" id="slider-md" min="-2" max="2" step="0.1" value="1">
+                                </div>
+                                <button class="btn btn-secondary btn-sm" id="btn-animate-matrix"><i class="fa-solid fa-play"></i> Apply Transformation</button>
+                            </div>
+
+                            <div class="control-group hidden" id="controls-eigen">
+                                <h4>Eigenvalue Search</h4>
+                                <p class="info-text">Rotate input vector <b>x (Purple)</b> using the slider below. Watch the transformed output vector <b>Ax (Amber)</b>. When they align in direction, <b>x</b> is an eigenvector!</p>
+                                <div class="slider-item">
+                                    <span>Rotate Vector x (Angle): <span id="val-angle">45°</span></span>
+                                    <input type="range" id="slider-angle" min="0" max="360" step="5" value="45">
+                                </div>
+                                <div class="matrix-display">
+                                    <span>Matrix A = <span class="matrix-brackets">[[1, 2], [2, 1]]</span></span>
+                                </div>
+                                <div id="eigen-status" class="status-alert">Rotating...</div>
+                            </div>
+
+                            <!-- E&M Control Groups -->
+                            <div class="control-group hidden" id="controls-em-charges">
+                                <h4>Adjust Charges</h4>
+                                <div class="mode-select">
+                                    <label for="charge-config">Configuration:</label>
+                                    <select id="charge-config" style="background: var(--bg-card); color: var(--text); border: 1px solid var(--border); padding: 6px; border-radius: 6px; width: 100%;">
+                                        <option value="single-pos">Single Positive Charge (+Q)</option>
+                                        <option value="single-neg">Single Negative Charge (-Q)</option>
+                                        <option value="dipole" selected>Electric Dipole (+Q and -q)</option>
+                                    </select>
+                                </div>
+                                <div class="slider-item" style="margin-top: 10px;">
+                                    <span>Charge Magnitude: <span id="val-qmag">3</span> nC</span>
+                                    <input type="range" id="slider-qmag" min="1" max="6" step="0.5" value="3">
+                                </div>
+                                <div class="slider-item" id="item-qdist">
+                                    <span>Dipole Separation: <span id="val-qdist">3.0</span> m</span>
+                                    <input type="range" id="slider-qdist" min="1.5" max="4.5" step="0.1" value="3">
+                                </div>
+                            </div>
+
+                            <div class="control-group hidden" id="controls-em-gauss">
+                                <h4>Gauss's Law Controls</h4>
+                                <p class="info-text">Verify Gauss's Law! Adjust the sphere radius or central charge. Drag the charge inside/outside the Gaussian surface to see the flux change.</p>
+                                <div class="slider-item">
+                                    <span>Enclosed Charge Q: <span id="val-gcharge">2</span> nC</span>
+                                    <input type="range" id="slider-gcharge" min="-5" max="5" step="1" value="2">
+                                </div>
+                                <div class="slider-item">
+                                    <span>Gaussian Surface Radius r: <span id="val-gradius">2.5</span> m</span>
+                                    <input type="range" id="slider-gradius" min="1.0" max="4.0" step="0.2" value="2.5">
+                                </div>
+                                <div class="status-alert" style="background: var(--primary-glow); border-color: rgba(59, 130, 246, 0.2); color: var(--primary); font-size: 11px; margin-top: 10px;">
+                                    Net Enclosed Charge: <b><span id="gauss-enc-q">2</span> nC</b><br>
+                                    Calculated Flux &Phi; = Q_enc / &epsilon;₀:<br>
+                                    <b><span id="gauss-flux-val">225.9</span> N&middot;m²/C</b>
+                                </div>
+                            </div>
+
+                            <div class="control-group hidden" id="controls-em-lorentz">
+                                <h4>Lorentz Force Trajectory</h4>
+                                <p class="info-text">A charge moving perpendicular to a uniform magnetic field (into screen, marked by &times;) experiences a magnetic force, tracing a circular orbit.</p>
+                                <div class="slider-item">
+                                    <span>Charge q: <span id="val-lcharge">1.0</span> &mu;C</span>
+                                    <input type="range" id="slider-lcharge" min="-2" max="2" step="0.5" value="1">
+                                </div>
+                                <div class="slider-item">
+                                    <span>Particle Velocity v: <span id="val-lvel">3.0</span> m/s</span>
+                                    <input type="range" id="slider-lvel" min="1.0" max="5.0" step="0.5" value="3">
+                                </div>
+                                <div class="slider-item">
+                                    <span>Magnetic Field B: <span id="val-lmag">1.5</span> T</span>
+                                    <input type="range" id="slider-lmag" min="0.5" max="3.0" step="0.1" value="1.5">
+                                </div>
+                                <div class="slider-item">
+                                    <span>Particle Mass m: <span id="val-lmass">1.0</span> &mu;g</span>
+                                    <input type="range" id="slider-lmass" min="0.5" max="2.0" step="0.1" value="1">
+                                </div>
+                                <div class="status-alert" style="background: var(--success-glow); border-color: rgba(16, 185, 129, 0.3); color: var(--success); font-size: 11px; margin-bottom: 12px;">
+                                    Calculated Radius r = mv/qB:<br>
+                                    <b><span id="lorentz-radius-val">2.00</span> meters</b>
+                                </div>
+                                <button class="btn btn-primary btn-sm" id="btn-play-lorentz" style="width: 100%;"><i class="fa-solid fa-play"></i> Run Particle Simulation</button>
+                            </div>
+
+                            <div class="control-group hidden" id="controls-em-biot">
+                                <h4>Biot-Savart Wire Field</h4>
+                                <div class="slider-item">
+                                    <span>Wire Current I: <span id="val-bcurrent">15</span> A</span>
+                                    <input type="range" id="slider-bcurrent" min="5" max="30" step="1" value="15">
+                                </div>
+                                <div class="slider-item">
+                                    <span>Probe Distance r: <span id="val-bdist">2.0</span> m</span>
+                                    <input type="range" id="slider-bdist" min="0.5" max="4.5" step="0.1" value="2">
+                                </div>
+                                <div class="status-alert" style="background: var(--primary-glow); border-color: rgba(59, 130, 246, 0.2); color: var(--primary); font-size: 11px; margin-top: 10px;">
+                                    Magnetic Field at Distance r:<br>
+                                    B = &mu;₀ I / 2&pi;r = <b><span id="biot-field-val">1.50</span> &mu;T</b>
+                                </div>
+                            </div>
+
+                            <div class="control-group hidden" id="controls-em-solenoid">
+                                <h4>Solenoid Magnetic Field</h4>
+                                <div class="slider-item">
+                                    <span>Current I: <span id="val-scurrent">2.0</span> A</span>
+                                    <input type="range" id="slider-scurrent" min="0.5" max="5.0" step="0.1" value="2">
+                                </div>
+                                <div class="slider-item">
+                                    <span>Turn Density n: <span id="val-sdensity">12</span> turns/cm</span>
+                                    <input type="range" id="slider-sdensity" min="5" max="25" step="1" value="12">
+                                </div>
+                                <div class="slider-item">
+                                    <span>Core Permeability &mu;ᵣ: <span id="val-score">1</span> (Air)</span>
+                                    <input type="range" id="slider-score" min="1" max="150" step="5" value="1">
+                                </div>
+                                <div class="status-alert" style="background: var(--primary-glow); border-color: rgba(59, 130, 246, 0.2); color: var(--primary); font-size: 11px; margin-top: 10px;">
+                                    Magnetic Field Inside Solenoid:<br>
+                                    B = &mu;₀ &mu;_r n I = <b><span id="solenoid-field-val">3.02</span> mT</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="em_course.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
